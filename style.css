@@ -398,90 +398,37 @@ a {
 }
 
 .hero-logo-card {
-  position: relative;
-
-  width: 100%;
-  min-height: 410px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
-  padding: 45px;
+  width: 100%;
 
-  overflow: hidden;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 
-  border:
-    1px solid
-    rgba(99, 109, 89, 0.1);
-
-  border-radius: 32px;
-
-  background:
-    radial-gradient(
-      circle at 50% 42%,
-      rgba(255, 255, 255, 0.92) 0%,
-      rgba(248, 245, 234, 0.8) 42%,
-      rgba(232, 235, 219, 0.8) 100%
-    );
-
-  box-shadow:
-    0 24px 55px
-    rgba(62, 64, 56, 0.1);
-}
-
-.hero-logo-card::before,
-.hero-logo-card::after {
-  content: "";
-
-  position: absolute;
-
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-.hero-logo-card::before {
-  width: 270px;
-  height: 270px;
-
-  top: -100px;
-  right: -90px;
-
-  background:
-    rgba(201, 164, 76, 0.08);
-}
-
-.hero-logo-card::after {
-  width: 220px;
-  height: 220px;
-
-  bottom: -110px;
-  left: -80px;
-
-  background:
-    rgba(99, 109, 89, 0.08);
+  padding: 0;
 }
 
 .hero-logo {
-  position: relative;
-  z-index: 1;
-
-  width: min(76%, 390px);
+  width: 100%;
+  max-width: 560px;
   height: auto;
 
   object-fit: contain;
+
+  border-radius: 24px;
 }
 
 .hero-logo-line {
   position: relative;
   z-index: 1;
 
-  width: 48px;
+  width: 64px;
   height: 2px;
 
-  margin-top: 22px;
+  margin: 24px 0 18px;
 
   border-radius: 2px;
 
