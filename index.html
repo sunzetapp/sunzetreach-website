@@ -48,16 +48,18 @@
     <div class="page-shell header-inner">
 
       <a
-  href="index.html"
-  class="brand"
-  aria-label="SunzetReach home"
->
-  <img
-    src="sunzetreach-logo.png"
-    alt="SunzetReach logo"
-    class="brand-logo"
-  />
-</a>
+        href="index.html"
+        class="brand"
+        aria-label="SunzetReach home"
+      >
+
+        <img
+          src="sunzetreach-logo.png"
+          alt="SunzetReach logo"
+          class="brand-logo"
+        />
+
+      </a>
 
       <div class="header-actions">
 
@@ -794,17 +796,19 @@
       >
 
         <a
-          href="#"
+          href="privacy.html"
           data-en="Privacy"
           data-no="Personvern"
+          data-legal="privacy"
         >
           Privacy
         </a>
 
         <a
-          href="#"
+          href="terms.html"
           data-en="Terms"
           data-no="Vilkår"
+          data-legal="terms"
         >
           Terms
         </a>
@@ -875,6 +879,29 @@
 
         }
       );
+
+
+      document
+        .querySelectorAll("[data-legal]")
+        .forEach((link) => {
+
+          const legalPage = link.dataset.legal;
+
+          if (legalPage === "privacy") {
+            link.href =
+              language === "no"
+                ? "privacy-no.html"
+                : "privacy.html";
+          }
+
+          if (legalPage === "terms") {
+            link.href =
+              language === "no"
+                ? "terms-no.html"
+                : "terms.html";
+          }
+
+        });
 
 
       localStorage.setItem(
