@@ -59,20 +59,16 @@
 
     .world-lights-story {
 
-      padding: 110px 0;
+      padding: 100px 0;
 
       background:
-        linear-gradient(
-          180deg,
-          #30382f 0%,
-          #252d26 100%
-        );
+        rgba(244, 246, 238, 0.72);
 
       border-top:
-        1px solid rgba(255,255,255,0.05);
+        1px solid rgba(62, 64, 56, 0.06);
 
       border-bottom:
-        1px solid rgba(255,255,255,0.05);
+        1px solid rgba(62, 64, 56, 0.06);
 
     }
 
@@ -99,13 +95,6 @@
     }
 
 
-    .world-lights-story-copy .eyebrow {
-
-      color: #d6bd78;
-
-    }
-
-
     .world-lights-story-copy h2 {
 
       max-width: 520px;
@@ -125,7 +114,7 @@
 
       letter-spacing: -0.025em;
 
-      color: #f7f3e8;
+      color: var(--olive-dark);
 
     }
 
@@ -136,8 +125,7 @@
 
       margin: 28px 0 0;
 
-      color:
-        rgba(247,243,232,0.72);
+      color: var(--muted);
 
       font-size: 13px;
 
@@ -155,7 +143,7 @@
       border-radius: 24px;
 
       box-shadow:
-        0 20px 55px rgba(0,0,0,0.28);
+        0 18px 45px rgba(50, 55, 45, 0.12);
 
     }
 
@@ -181,44 +169,46 @@
 
     .features-section {
 
-      padding-top: 105px;
+      padding-top: 95px;
 
-      padding-bottom: 105px;
+      padding-bottom: 95px;
 
     }
 
 
     .features-section .feature-grid {
 
-      background: transparent;
-
-      border: none;
-
-      box-shadow: none;
+      gap: 18px;
 
     }
 
 
     .features-section .feature-card {
 
-      background: transparent;
+      background:
+        rgba(255, 255, 255, 0.52);
 
-      border: none;
+      border:
+        1px solid rgba(62, 64, 56, 0.09);
 
-      border-radius: 0;
+      border-radius: 18px;
 
-      box-shadow: none;
+      box-shadow:
+        0 8px 25px rgba(50, 55, 45, 0.045);
 
       padding:
-        10px 38px 15px;
+        28px 28px 30px;
 
     }
 
 
-    .features-section .feature-card + .feature-card {
+    .features-section .feature-card:hover {
 
-      border-left:
-        1px solid rgba(62,64,56,0.12);
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 12px 30px rgba(50, 55, 45, 0.07);
 
     }
 
@@ -229,7 +219,7 @@
 
       height: 38px;
 
-      margin-bottom: 24px;
+      margin-bottom: 22px;
 
     }
 
@@ -243,7 +233,7 @@
 
     .features-section .feature-card h3 {
 
-      margin-bottom: 12px;
+      margin-bottom: 10px;
 
     }
 
@@ -267,7 +257,7 @@
 
       .world-lights-story {
 
-        padding: 75px 0;
+        padding: 70px 0;
 
       }
 
@@ -313,9 +303,9 @@
 
       .features-section {
 
-        padding-top: 75px;
+        padding-top: 70px;
 
-        padding-bottom: 75px;
+        padding-bottom: 70px;
 
       }
 
@@ -324,7 +314,7 @@
 
         grid-template-columns: 1fr;
 
-        gap: 0;
+        gap: 15px;
 
       }
 
@@ -332,19 +322,9 @@
       .features-section .feature-card {
 
         padding:
-          30px 0;
+          27px 25px 29px;
 
         text-align: center;
-
-      }
-
-
-      .features-section .feature-card + .feature-card {
-
-        border-left: none;
-
-        border-top:
-          1px solid rgba(62,64,56,0.12);
 
       }
 
@@ -775,8 +755,6 @@
         <div class="feature-grid">
 
 
-          <!-- 01 -->
-
           <article class="feature-card">
 
             <div
@@ -810,8 +788,6 @@
           </article>
 
 
-          <!-- 02 -->
-
           <article class="feature-card">
 
             <div
@@ -844,8 +820,6 @@
 
           </article>
 
-
-          <!-- 03 -->
 
           <article class="feature-card">
 
@@ -919,8 +893,6 @@
         <div class="steps-grid">
 
 
-          <!-- 01 -->
-
           <article class="step-card">
 
             <span class="step-number">
@@ -947,8 +919,6 @@
           </article>
 
 
-          <!-- 02 -->
-
           <article class="step-card">
 
             <span class="step-number">
@@ -974,8 +944,6 @@
 
           </article>
 
-
-          <!-- 03 -->
 
           <article class="step-card">
 
@@ -1392,7 +1360,7 @@
 
 
       /*
-       * Privacy and Terms
+       * Update legal links
        */
 
       document
