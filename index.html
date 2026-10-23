@@ -15,6 +15,11 @@
 
   <title>SunzetReach — A Kinder World, Together</title>
 
+
+  <!-- =====================================
+       FONTS
+  ====================================== -->
+
   <link
     rel="preconnect"
     href="https://fonts.googleapis.com"
@@ -31,99 +36,333 @@
     rel="stylesheet"
   />
 
+
+  <!-- =====================================
+       MAIN STYLESHEET
+  ====================================== -->
+
   <link
     rel="stylesheet"
     href="style.css"
   />
 
+
+  <!-- =====================================
+       PAGE-SPECIFIC STYLES
+  ====================================== -->
+
   <style>
+
     /* =====================================
-       WORLD LIGHTS STORY
+       WORLD LIGHTS
     ====================================== */
 
     .world-lights-story {
-      padding: 100px 0;
-      border-top: 1px solid rgba(62, 64, 56, 0.06);
-      background: rgba(255, 255, 255, 0.28);
+
+      padding: 110px 0;
+
+      background:
+        linear-gradient(
+          180deg,
+          #30382f 0%,
+          #252d26 100%
+        );
+
+      border-top:
+        1px solid rgba(255,255,255,0.05);
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.05);
+
     }
+
 
     .world-lights-story-grid {
+
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+
+      grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(0, 0.95fr);
+
       align-items: center;
+
       gap: 70px;
+
     }
+
 
     .world-lights-story-copy {
+
       max-width: 600px;
+
     }
+
+
+    .world-lights-story-copy .eyebrow {
+
+      color: #d6bd78;
+
+    }
+
 
     .world-lights-story-copy h2 {
+
       max-width: 520px;
+
       margin: 0;
-      font-family: "Cormorant Garamond", serif;
-      font-size: clamp(39px, 4vw, 56px);
+
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size:
+        clamp(39px, 4vw, 56px);
+
       font-weight: 600;
+
       line-height: 1.03;
+
       letter-spacing: -0.025em;
-      color: var(--olive-dark);
+
+      color: #f7f3e8;
+
     }
+
 
     .world-lights-story-copy p:last-child {
+
       max-width: 600px;
+
       margin: 28px 0 0;
-      color: var(--muted);
+
+      color:
+        rgba(247,243,232,0.72);
+
       font-size: 13px;
+
       line-height: 1.85;
+
     }
+
 
     .world-lights-story-image {
+
       width: 100%;
+
       overflow: hidden;
+
       border-radius: 24px;
-      box-shadow: 0 18px 45px rgba(50, 55, 45, 0.12);
+
+      box-shadow:
+        0 20px 55px rgba(0,0,0,0.28);
+
     }
 
+
     .world-lights-story-image img {
+
       display: block;
+
       width: 100%;
+
       height: auto;
+
       aspect-ratio: 4 / 3;
+
       object-fit: cover;
+
     }
+
+
+    /* =====================================
+       SMALL GESTURES
+    ====================================== */
+
+    .features-section {
+
+      padding-top: 105px;
+
+      padding-bottom: 105px;
+
+    }
+
+
+    .features-section .feature-grid {
+
+      background: transparent;
+
+      border: none;
+
+      box-shadow: none;
+
+    }
+
+
+    .features-section .feature-card {
+
+      background: transparent;
+
+      border: none;
+
+      border-radius: 0;
+
+      box-shadow: none;
+
+      padding:
+        10px 38px 15px;
+
+    }
+
+
+    .features-section .feature-card + .feature-card {
+
+      border-left:
+        1px solid rgba(62,64,56,0.12);
+
+    }
+
+
+    .features-section .feature-icon {
+
+      width: 38px;
+
+      height: 38px;
+
+      margin-bottom: 24px;
+
+    }
+
+
+    .features-section .feature-number {
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .features-section .feature-card h3 {
+
+      margin-bottom: 12px;
+
+    }
+
+
+    .features-section .feature-card > p:last-child {
+
+      max-width: 230px;
+
+      margin-bottom: 0;
+
+      line-height: 1.7;
+
+    }
+
+
+    /* =====================================
+       MOBILE
+    ====================================== */
 
     @media (max-width: 800px) {
 
       .world-lights-story {
-        padding: 70px 0;
+
+        padding: 75px 0;
+
       }
+
 
       .world-lights-story-grid {
+
         grid-template-columns: 1fr;
+
         gap: 45px;
+
       }
+
 
       .world-lights-story-copy {
+
         order: 1;
+
         max-width: 720px;
+
         margin: 0 auto;
+
         text-align: center;
+
       }
 
+
       .world-lights-story-image {
+
         order: 2;
+
       }
+
 
       .world-lights-story-copy h2,
       .world-lights-story-copy p:last-child {
+
         margin-left: auto;
+
         margin-right: auto;
+
+      }
+
+
+      .features-section {
+
+        padding-top: 75px;
+
+        padding-bottom: 75px;
+
+      }
+
+
+      .features-section .feature-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+      }
+
+
+      .features-section .feature-card {
+
+        padding:
+          30px 0;
+
+        text-align: center;
+
+      }
+
+
+      .features-section .feature-card + .feature-card {
+
+        border-left: none;
+
+        border-top:
+          1px solid rgba(62,64,56,0.12);
+
+      }
+
+
+      .features-section .feature-card > p:last-child {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
       }
 
     }
+
   </style>
 
 </head>
+
 
 <body>
 
@@ -141,11 +380,13 @@
         class="brand"
         aria-label="SunzetReach home"
       >
+
         <img
           src="sunzetreach-logo.png"
           alt="SunzetReach logo"
           class="brand-logo"
         />
+
       </a>
 
 
@@ -164,6 +405,7 @@
             About
           </a>
 
+
           <a
             href="#lights"
             data-en="Little Lights"
@@ -172,6 +414,7 @@
             Little Lights
           </a>
 
+
           <a
             href="#cards"
             data-en="Cards"
@@ -179,6 +422,7 @@
           >
             Cards
           </a>
+
 
           <a
             href="#premium"
@@ -236,6 +480,7 @@
 
       <div class="page-shell hero-grid">
 
+
         <div class="hero-copy">
 
           <p
@@ -246,12 +491,14 @@
             SunzetReach
           </p>
 
+
           <h1
             data-en="A kinder world, together."
             data-no="En varmere verden, sammen."
           >
             A kinder world, together.
           </h1>
+
 
           <p
             class="hero-text"
@@ -274,6 +521,7 @@
             >
               Discover SunzetReach
             </a>
+
 
             <a
               href="#lights"
@@ -299,7 +547,9 @@
               class="hero-logo"
             />
 
+
             <div class="hero-logo-line"></div>
+
 
             <p
               data-en="Send a little light into the world."
@@ -328,6 +578,7 @@
 
       <div class="page-shell intro-grid">
 
+
         <div class="intro-heading">
 
           <p
@@ -337,6 +588,7 @@
           >
             A simple thought
           </p>
+
 
           <h2
             data-en="Little lights can make a difference."
@@ -357,6 +609,7 @@
             SunzetReach was created with a simple idea:
             make it easy to send something kind into the world.
           </p>
+
 
           <p
             data-en="A little light can be a warm thought, a few encouraging words, a beautiful card or simply a reminder that someone cares."
@@ -381,6 +634,7 @@
 
       <div class="page-shell little-light-story-grid">
 
+
         <div class="little-light-story-image">
 
           <img
@@ -400,6 +654,7 @@
           >
             A little light
           </p>
+
 
           <h2
             data-en="Sometimes, a small gesture is enough."
@@ -438,6 +693,7 @@
 
       <div class="page-shell world-lights-story-grid">
 
+
         <div class="world-lights-story-copy">
 
           <p
@@ -448,12 +704,14 @@
             World Lights
           </p>
 
+
           <h2
             data-en="Let a little light travel further."
             data-no="La et lite lysglimt reise videre."
           >
             Let a little light travel further.
           </h2>
+
 
           <p
             data-en="Some little lights are sent without knowing who will receive them. They can travel from person to person, carrying a small moment of warmth along the way."
@@ -482,7 +740,7 @@
 
 
     <!-- =====================================
-         LITTLE LIGHTS / FEATURES
+         SMALL GESTURES
     ====================================== -->
 
     <section
@@ -491,6 +749,7 @@
     >
 
       <div class="page-shell">
+
 
         <div class="section-heading">
 
@@ -501,6 +760,7 @@
           >
             Little lights
           </p>
+
 
           <h2
             data-en="Small gestures. Real connections."
@@ -515,6 +775,8 @@
         <div class="feature-grid">
 
 
+          <!-- 01 -->
+
           <article class="feature-card">
 
             <div
@@ -524,9 +786,11 @@
               ✦
             </div>
 
+
             <p class="feature-number">
               01
             </p>
+
 
             <h3
               data-en="Send to someone"
@@ -535,16 +799,18 @@
               Send to someone
             </h3>
 
+
             <p
-              data-en="Send a little light to someone in your circle with a card, a message or a small moment of kindness."
-              data-no="Send et lite lysglimt til noen i lyskretsen din med et kort, en melding eller et lite øyeblikk av omtanke."
+              data-en="For someone you know."
+              data-no="For noen du kjenner."
             >
-              Send a little light to someone in your circle with
-              a card, a message or a small moment of kindness.
+              For someone you know.
             </p>
 
           </article>
 
+
+          <!-- 02 -->
 
           <article class="feature-card">
 
@@ -555,9 +821,11 @@
               ✧
             </div>
 
+
             <p class="feature-number">
               02
             </p>
+
 
             <h3
               data-en="Send to the world"
@@ -566,16 +834,18 @@
               Send to the world
             </h3>
 
+
             <p
-              data-en="Send an anonymous little light into the world and let it become part of something bigger."
-              data-no="Send et anonymt lysglimt ut i verden og la det bli en del av noe større."
+              data-en="Let a little light travel."
+              data-no="La et lite lysglimt reise videre."
             >
-              Send an anonymous little light into the world
-              and let it become part of something bigger.
+              Let a little light travel.
             </p>
 
           </article>
 
+
+          <!-- 03 -->
 
           <article class="feature-card">
 
@@ -586,9 +856,11 @@
               ◇
             </div>
 
+
             <p class="feature-number">
               03
             </p>
+
 
             <h3
               data-en="Pass it on"
@@ -597,12 +869,12 @@
               Pass it on
             </h3>
 
+
             <p
-              data-en="A little light can continue its journey. Receive one, keep it close or pass the warmth on."
-              data-no="Et lite lysglimt kan fortsette reisen. Motta et, ta vare på det eller send varmen videre."
+              data-en="Keep the light moving."
+              data-no="La lysglimtet bevege seg videre."
             >
-              A little light can continue its journey.
-              Receive one, keep it close or pass the warmth on.
+              Keep the light moving.
             </p>
 
           </article>
@@ -622,6 +894,7 @@
 
       <div class="page-shell">
 
+
         <div class="section-heading centered">
 
           <p
@@ -631,6 +904,7 @@
           >
             How it works
           </p>
+
 
           <h2
             data-en="One little light can start something beautiful."
@@ -645,11 +919,14 @@
         <div class="steps-grid">
 
 
+          <!-- 01 -->
+
           <article class="step-card">
 
             <span class="step-number">
               01
             </span>
+
 
             <h3
               data-en="Choose"
@@ -657,6 +934,7 @@
             >
               Choose
             </h3>
+
 
             <p
               data-en="Choose someone you know, or choose to send a little light into the world."
@@ -669,11 +947,14 @@
           </article>
 
 
+          <!-- 02 -->
+
           <article class="step-card">
 
             <span class="step-number">
               02
             </span>
+
 
             <h3
               data-en="Send"
@@ -681,6 +962,7 @@
             >
               Send
             </h3>
+
 
             <p
               data-en="Choose a card, add a message and send your little light on its way."
@@ -693,11 +975,14 @@
           </article>
 
 
+          <!-- 03 -->
+
           <article class="step-card">
 
             <span class="step-number">
               03
             </span>
+
 
             <h3
               data-en="Spread"
@@ -705,6 +990,7 @@
             >
               Spread
             </h3>
+
 
             <p
               data-en="Let kindness travel from person to person and become part of a larger ripple."
@@ -734,6 +1020,7 @@
 
       <div class="page-shell">
 
+
         <div class="section-heading centered">
 
           <p
@@ -744,12 +1031,14 @@
             Little lights, beautifully sent
           </p>
 
+
           <h2
             data-en="A card for every little moment."
             data-no="Et kort for hvert lille øyeblikk."
           >
             A card for every little moment.
           </h2>
+
 
           <p
             class="section-intro"
@@ -799,12 +1088,14 @@
             Real connections
           </p>
 
+
           <h2
             data-en="Connect without needing to share your phone number."
             data-no="Koble deg sammen uten å måtte dele telefonnummeret ditt."
           >
             Connect without needing to share your phone number.
           </h2>
+
 
           <p
             data-en="SunzetReach uses SunzetReach-ID to help people connect in a simple and more private way."
@@ -826,9 +1117,11 @@
             YOUR CONNECTION
           </span>
 
+
           <strong>
             SunzetReach-ID
           </strong>
+
 
           <p
             data-en="A simple way to find and connect with someone."
@@ -855,6 +1148,7 @@
 
       <div class="page-shell premium-inner">
 
+
         <div class="premium-copy">
 
           <p
@@ -865,12 +1159,14 @@
             SunzetReach Premium
           </p>
 
+
           <h2
             data-en="More ways to spread little lights."
             data-no="Flere måter å spre lysglimt på."
           >
             More ways to spread little lights.
           </h2>
+
 
           <p
             data-en="Premium gives you access to more contacts, more ways to share little lights and exclusive cards."
@@ -898,6 +1194,7 @@
 
       <div class="page-shell download-inner">
 
+
         <div class="download-copy">
 
           <p
@@ -908,12 +1205,14 @@
             SunzetReach
           </p>
 
+
           <h2
             data-en="Send a little light into the world."
             data-no="Send et lite lysglimt ut i verden."
           >
             Send a little light into the world.
           </h2>
+
 
           <p
             data-en="Discover SunzetReach and become part of a kinder world, together."
@@ -940,6 +1239,7 @@
               Download on the
             </span>
 
+
             <strong>
               App Store
             </strong>
@@ -958,6 +1258,7 @@
             >
               Get it on
             </span>
+
 
             <strong>
               Google Play
@@ -981,6 +1282,7 @@
   <footer class="site-footer">
 
     <div class="page-shell footer-inner">
+
 
       <a
         href="index.html"
@@ -1009,6 +1311,7 @@
           Privacy
         </a>
 
+
         <a
           href="terms.html"
           data-en="Terms"
@@ -1017,6 +1320,7 @@
         >
           Terms
         </a>
+
 
         <a
           href="mailto:sunzet.app@gmail.com"
@@ -1058,6 +1362,7 @@
 
     const setLanguage = (language) => {
 
+
       document.documentElement.lang =
         language === "no"
           ? "nb"
@@ -1087,19 +1392,21 @@
 
 
       /*
-       * Update Privacy and Terms links
-       * to match the selected language.
+       * Privacy and Terms
        */
 
       document
         .querySelectorAll("[data-legal]")
         .forEach((link) => {
 
+
           const legalPage =
             link.dataset.legal;
 
 
-          if (legalPage === "privacy") {
+          if (
+            legalPage === "privacy"
+          ) {
 
             link.href =
               language === "no"
@@ -1109,7 +1416,9 @@
           }
 
 
-          if (legalPage === "terms") {
+          if (
+            legalPage === "terms"
+          ) {
 
             link.href =
               language === "no"
@@ -1167,6 +1476,7 @@
     );
 
   </script>
+
 
 </body>
 </html>
