@@ -37,6 +37,10 @@
   />
 
   <style>
+    /* =====================================
+       WORLD LIGHTS STORY
+    ====================================== */
+
     .world-lights-story {
       padding: 100px 0;
       border-top: 1px solid rgba(62, 64, 56, 0.06);
@@ -89,6 +93,7 @@
     }
 
     @media (max-width: 800px) {
+
       .world-lights-story {
         padding: 70px 0;
       }
@@ -114,12 +119,14 @@
         margin-left: auto;
         margin-right: auto;
       }
+
     }
   </style>
 
 </head>
 
 <body>
+
 
   <!-- =====================================
        HEADER
@@ -140,6 +147,7 @@
           class="brand-logo"
         />
       </a>
+
 
       <div class="header-actions">
 
@@ -182,6 +190,7 @@
 
         </nav>
 
+
         <div
           class="language-switch"
           aria-label="Choose language"
@@ -218,6 +227,7 @@
 
   <main>
 
+
     <!-- =====================================
          HERO
     ====================================== -->
@@ -252,6 +262,7 @@
             into the world. Small moments of warmth can travel
             further than we imagine.
           </p>
+
 
           <div class="hero-buttons">
 
@@ -363,7 +374,7 @@
 
 
     <!-- =====================================
-         LITTLE LIGHT STORY
+         A LITTLE LIGHT
     ====================================== -->
 
     <section class="little-light-story">
@@ -397,6 +408,7 @@
             Sometimes, a small gesture is enough.
           </h2>
 
+
           <div class="intro-copy">
 
             <p
@@ -416,7 +428,61 @@
 
 
     <!-- =====================================
-         LITTLE LIGHTS
+         WORLD LIGHTS
+    ====================================== -->
+
+    <section
+      class="world-lights-story"
+      id="world-lights"
+    >
+
+      <div class="page-shell world-lights-story-grid">
+
+        <div class="world-lights-story-copy">
+
+          <p
+            class="eyebrow"
+            data-en="World Lights"
+            data-no="Lysglimt i verden"
+          >
+            World Lights
+          </p>
+
+          <h2
+            data-en="Let a little light travel further."
+            data-no="La et lite lysglimt reise videre."
+          >
+            Let a little light travel further.
+          </h2>
+
+          <p
+            data-en="Some little lights are sent without knowing who will receive them. They can travel from person to person, carrying a small moment of warmth along the way."
+            data-no="Noen lysglimt sendes uten at vi vet hvem som vil motta dem. De kan reise fra person til person og ta med seg et lite øyeblikk av varme på veien."
+          >
+            Some little lights are sent without knowing who will receive them.
+            They can travel from person to person, carrying a small moment
+            of warmth along the way.
+          </p>
+
+        </div>
+
+
+        <div class="world-lights-story-image">
+
+          <img
+            src="sunzetreach-world-lights.png"
+            alt="A little golden light travelling across a peaceful landscape"
+          />
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         LITTLE LIGHTS / FEATURES
     ====================================== -->
 
     <section
@@ -447,6 +513,7 @@
 
 
         <div class="feature-grid">
+
 
           <article class="feature-card">
 
@@ -548,59 +615,7 @@
 
 
     <!-- =====================================
-         WORLD LIGHTS
-    ====================================== -->
-
-    <section
-      class="world-lights-story"
-      id="world-lights"
-    >
-
-      <div class="page-shell world-lights-story-grid">
-
-        <div class="world-lights-story-copy">
-
-          <p
-            class="eyebrow"
-            data-en="World Lights"
-            data-no="Lysglimt i verden"
-          >
-            World Lights
-          </p>
-
-          <h2
-            data-en="Let a little light travel further."
-            data-no="La et lite lysglimt reise videre."
-          >
-            Let a little light travel further.
-          </h2>
-
-          <p
-            data-en="Some little lights are sent without knowing who will receive them. They can travel from person to person, carrying a small moment of warmth along the way."
-            data-no="Noen lysglimt sendes uten at vi vet hvem som vil motta dem. De kan reise fra person til person og ta med seg et lite øyeblikk av varme på veien."
-          >
-            Some little lights are sent without knowing who will receive them. They can travel from person to person, carrying a small moment of warmth along the way.
-          </p>
-
-        </div>
-
-
-        <div class="world-lights-story-image">
-
-          <img
-            src="sunzetreach-world-lights.png"
-            alt="A little golden light travelling across a peaceful landscape"
-          />
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================
-         THREE STEPS
+         HOW IT WORKS
     ====================================== -->
 
     <section class="steps-section">
@@ -628,6 +643,7 @@
 
 
         <div class="steps-grid">
+
 
           <article class="step-card">
 
@@ -771,6 +787,7 @@
     <section class="connection-section">
 
       <div class="page-shell connection-inner">
+
 
         <div class="connection-copy">
 
@@ -1069,25 +1086,36 @@
       );
 
 
-      // Update Privacy and Terms links to match the selected language.
+      /*
+       * Update Privacy and Terms links
+       * to match the selected language.
+       */
+
       document
         .querySelectorAll("[data-legal]")
         .forEach((link) => {
 
-          const legalPage = link.dataset.legal;
+          const legalPage =
+            link.dataset.legal;
+
 
           if (legalPage === "privacy") {
+
             link.href =
               language === "no"
                 ? "privacy-no.html"
                 : "privacy.html";
+
           }
 
+
           if (legalPage === "terms") {
+
             link.href =
               language === "no"
                 ? "terms-no.html"
                 : "terms.html";
+
           }
 
         });
