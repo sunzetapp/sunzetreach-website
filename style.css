@@ -1512,3 +1512,45 @@ a {
   }
 
 }
+
+/* =====================================
+   MATCH HERO AND LITTLE LIGHT IMAGES
+====================================== */
+
+.hero-logo-card {
+  width: 100%;
+  max-width: none;
+}
+
+.hero-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+
+/* Keep both main images visually balanced */
+
+.little-light-story-image {
+  width: 100%;
+}
+
+.little-light-story-image img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+
+@media (max-width: 800px) {
+
+  .hero-logo {
+    aspect-ratio: 4 / 3;
+  }
+
+  .little-light-story-image img {
+    aspect-ratio: 4 / 3;
+  }
+
+}
