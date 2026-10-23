@@ -41,111 +41,108 @@
   ====================================== -->
 
   <style>
+  .world-lights-story {
+    padding: 100px 0;
+    border-top: 1px solid rgba(62, 64, 56, 0.06);
+    background: rgba(255, 255, 255, 0.28);
+  }
+
+  .world-lights-story-grid {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 0.95fr)
+      minmax(0, 1.05fr);
+    align-items: center;
+    gap: 70px;
+  }
+
+  .world-lights-story-copy {
+    max-width: 600px;
+  }
+
+  .world-lights-story-copy h2 {
+    max-width: 520px;
+    margin: 0;
+
+    font-family:
+      "Cormorant Garamond",
+      serif;
+
+    font-size:
+      clamp(39px, 4vw, 56px);
+
+    font-weight: 600;
+    line-height: 1.03;
+    letter-spacing: -0.025em;
+
+    color: var(--olive-dark);
+  }
+
+  .world-lights-story-copy p:last-child {
+    max-width: 600px;
+
+    margin: 28px 0 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  /* SAME SIZE AS THE OTHER MAIN IMAGES */
+
+  .world-lights-story-image {
+    width: 100%;
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    box-shadow:
+      0 18px 45px
+      rgba(50, 55, 45, 0.12);
+  }
+
+  .world-lights-story-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+  }
+
+
+  @media (max-width: 800px) {
+
     .world-lights-story {
-      padding: 100px 0;
-      border-top: 1px solid rgba(62, 64, 56, 0.06);
-      background: rgba(255, 255, 255, 0.28);
+      padding: 70px 0;
     }
 
     .world-lights-story-grid {
-      display: grid;
-      grid-template-columns:
-        minmax(0, 0.95fr)
-        minmax(0, 1.05fr);
-      align-items: center;
-      gap: 70px;
+      grid-template-columns: 1fr;
+      gap: 45px;
     }
 
     .world-lights-story-copy {
-      max-width: 600px;
-    }
-
-    .world-lights-story-copy h2 {
-      max-width: 520px;
-      margin: 0;
-
-      font-family:
-        "Cormorant Garamond",
-        serif;
-
-      font-size:
-        clamp(39px, 4vw, 56px);
-
-      font-weight: 600;
-      line-height: 1.03;
-      letter-spacing: -0.025em;
-
-      color: var(--olive-dark);
-    }
-
-    .world-lights-story-copy p:last-child {
-      max-width: 600px;
-
-      margin: 28px 0 0;
-
-      color: var(--muted);
-
-      font-size: 13px;
-      line-height: 1.85;
+      order: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .world-lights-story-image {
-      width: 100%;
-
-      overflow: hidden;
-
-      border-radius: 24px;
-
-      box-shadow:
-        0 18px 45px
-        rgba(50, 55, 45, 0.12);
+      order: 2;
     }
 
     .world-lights-story-image img {
-      display: block;
-
-      width: 100%;
-      height: auto;
-
       aspect-ratio: 4 / 3;
-
-      object-fit: cover;
     }
 
-    @media (max-width: 800px) {
-
-      .world-lights-story {
-        padding: 70px 0;
-      }
-
-      .world-lights-story-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .world-lights-story-copy {
-        order: 1;
-
-        max-width: 720px;
-
-        margin: 0 auto;
-
-        text-align: center;
-      }
-
-      .world-lights-story-image {
-        order: 2;
-      }
-
-      .world-lights-story-copy h2,
-      .world-lights-story-copy p:last-child {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-    }
-  </style>
-
+  }
+</style>
+  
 </head>
 
 <body>
