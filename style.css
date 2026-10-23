@@ -1442,3 +1442,73 @@ a {
     transition: none !important;
   }
 }
+
+/* =====================================
+   LITTLE LIGHT STORY
+====================================== */
+
+.little-light-story {
+  padding: 100px 0;
+}
+
+.little-light-story-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 80px;
+}
+
+.little-light-story-image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(50, 55, 45, 0.12);
+}
+
+.little-light-story-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.little-light-story-grid .intro-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.little-light-story-grid .intro-copy {
+  margin-top: 28px;
+}
+
+
+/* =====================================
+   MOBILE
+====================================== */
+
+@media (max-width: 800px) {
+
+  .little-light-story {
+    padding: 70px 0;
+  }
+
+  .little-light-story-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .little-light-story-image {
+    order: 1;
+  }
+
+  .little-light-story-grid .intro-heading {
+    order: 2;
+  }
+
+  .little-light-story-image img {
+    aspect-ratio: 4 / 3;
+  }
+
+}
