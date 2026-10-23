@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
 
   <meta
@@ -16,9 +14,6 @@
   />
 
   <title>SunzetReach — A Kinder World, Together</title>
-
-
-  <!-- Fonts -->
 
   <link
     rel="preconnect"
@@ -36,43 +31,65 @@
     rel="stylesheet"
   />
 
-
-  <!-- Main stylesheet -->
-
   <link
     rel="stylesheet"
     href="style.css"
   />
 
-
   <!-- =====================================
-       LITTLE LIGHT STORY
+       WORLD LIGHTS STORY
   ====================================== -->
 
   <style>
-
-    .little-light-story {
+    .world-lights-story {
       padding: 100px 0;
+      border-top: 1px solid rgba(62, 64, 56, 0.06);
+      background: rgba(255, 255, 255, 0.28);
     }
 
-
-    .little-light-story-grid {
-
+    .world-lights-story-grid {
       display: grid;
-
       grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(0, 0.95fr);
-
+        minmax(0, 0.95fr)
+        minmax(0, 1.05fr);
       align-items: center;
-
-      gap: 80px;
-
+      gap: 70px;
     }
 
+    .world-lights-story-copy {
+      max-width: 600px;
+    }
 
-    .little-light-story-image {
+    .world-lights-story-copy h2 {
+      max-width: 520px;
+      margin: 0;
 
+      font-family:
+        "Cormorant Garamond",
+        serif;
+
+      font-size:
+        clamp(39px, 4vw, 56px);
+
+      font-weight: 600;
+      line-height: 1.03;
+      letter-spacing: -0.025em;
+
+      color: var(--olive-dark);
+    }
+
+    .world-lights-story-copy p:last-child {
+      max-width: 600px;
+
+      margin: 28px 0 0;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.85;
+    }
+
+    .world-lights-story-image {
       width: 100%;
 
       overflow: hidden;
@@ -82,83 +99,56 @@
       box-shadow:
         0 18px 45px
         rgba(50, 55, 45, 0.12);
-
     }
 
-
-    .little-light-story-image img {
-
+    .world-lights-story-image img {
       display: block;
 
       width: 100%;
-
       height: auto;
 
       aspect-ratio: 4 / 3;
 
       object-fit: cover;
-
     }
-
-
-    .little-light-story-copy {
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-
-    }
-
-
-    .little-light-story-copy .intro-copy {
-
-      margin-top: 28px;
-
-    }
-
 
     @media (max-width: 800px) {
 
-      .little-light-story {
-
+      .world-lights-story {
         padding: 70px 0;
-
       }
 
-
-      .little-light-story-grid {
-
+      .world-lights-story-grid {
         grid-template-columns: 1fr;
-
         gap: 45px;
-
       }
 
-
-      .little-light-story-image {
-
+      .world-lights-story-copy {
         order: 1;
 
+        max-width: 720px;
+
+        margin: 0 auto;
+
+        text-align: center;
       }
 
-
-      .little-light-story-copy {
-
+      .world-lights-story-image {
         order: 2;
+      }
 
+      .world-lights-story-copy h2,
+      .world-lights-story-copy p:last-child {
+        margin-left: auto;
+        margin-right: auto;
       }
 
     }
-
   </style>
 
 </head>
 
-
 <body>
-
 
   <!-- =====================================
        HEADER
@@ -167,7 +157,6 @@
   <header class="site-header">
 
     <div class="page-shell header-inner">
-
 
       <a
         href="index.html"
@@ -186,7 +175,6 @@
 
       <div class="header-actions">
 
-
         <nav
           class="main-nav"
           aria-label="Main navigation"
@@ -200,7 +188,6 @@
             About
           </a>
 
-
           <a
             href="#lights"
             data-en="Little Lights"
@@ -209,7 +196,6 @@
             Little Lights
           </a>
 
-
           <a
             href="#cards"
             data-en="Cards"
@@ -217,7 +203,6 @@
           >
             Cards
           </a>
-
 
           <a
             href="#premium"
@@ -243,11 +228,9 @@
             EN
           </button>
 
-
           <span aria-hidden="true">
             /
           </span>
-
 
           <button
             type="button"
@@ -266,9 +249,7 @@
   </header>
 
 
-
   <main>
-
 
     <!-- =====================================
          HERO
@@ -278,9 +259,7 @@
 
       <div class="page-shell hero-grid">
 
-
         <div class="hero-copy">
-
 
           <p
             class="eyebrow"
@@ -312,7 +291,6 @@
 
           <div class="hero-buttons">
 
-
             <a
               href="#download"
               class="primary-button"
@@ -337,12 +315,9 @@
         </div>
 
 
-
         <div class="hero-art">
 
-
           <div class="hero-logo-card">
-
 
             <img
               src="sunzetreach-hero.png.png"
@@ -350,9 +325,7 @@
               class="hero-logo"
             />
 
-
             <div class="hero-logo-line"></div>
-
 
             <p
               data-en="Send a little light into the world."
@@ -370,38 +343,18 @@
     </section>
 
 
-
     <!-- =====================================
-         LITTLE LIGHT STORY
+         ABOUT
     ====================================== -->
 
     <section
-      class="intro-section little-light-story"
+      class="intro-section"
       id="about"
     >
 
-      <div
-        class="page-shell little-light-story-grid"
-      >
+      <div class="page-shell intro-grid">
 
-
-        <!-- IMAGE -->
-
-        <div class="little-light-story-image">
-
-          <img
-            src="sunzetreach-little-light.png"
-            alt="A glowing Little Light overlooking a peaceful sunset landscape"
-          />
-
-        </div>
-
-
-
-        <!-- TEXT -->
-
-        <div class="little-light-story-copy">
-
+        <div class="intro-heading">
 
           <p
             class="eyebrow"
@@ -419,25 +372,81 @@
             Little lights can make a difference.
           </h2>
 
+        </div>
+
+
+        <div class="intro-copy">
+
+          <p
+            data-en="SunzetReach was created with a simple idea: make it easy to send something kind into the world."
+            data-no="SunzetReach er skapt med en enkel tanke: å gjøre det enkelt å sende noe godt ut i verden."
+          >
+            SunzetReach was created with a simple idea:
+            make it easy to send something kind into the world.
+          </p>
+
+
+          <p
+            data-en="A little light can be a warm thought, a few encouraging words, a beautiful card or simply a reminder that someone cares."
+            data-no="Et lite lysglimt kan være en varm tanke, noen oppmuntrende ord, et vakkert kort eller bare en liten påminnelse om at noen bryr seg."
+          >
+            A little light can be a warm thought, a few encouraging
+            words, a beautiful card or simply a reminder that someone cares.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         LITTLE LIGHT STORY
+    ====================================== -->
+
+    <section class="little-light-story">
+
+      <div class="page-shell little-light-story-grid">
+
+        <div class="little-light-story-image">
+
+          <img
+            src="sunzetreach-little-light.png"
+            alt="A glowing little light beside a peaceful lake at sunset"
+          />
+
+        </div>
+
+
+        <div class="intro-heading">
+
+          <p
+            class="eyebrow"
+            data-en="A little light"
+            data-no="Et lite lysglimt"
+          >
+            A little light
+          </p>
+
+
+          <h2
+            data-en="Sometimes, a small gesture is enough."
+            data-no="Noen ganger er en liten handling nok."
+          >
+            Sometimes, a small gesture is enough.
+          </h2>
+
 
           <div class="intro-copy">
 
-
             <p
-              data-en="SunzetReach was created with a simple idea: make it easy to send something kind into the world."
-              data-no="SunzetReach er skapt med en enkel tanke: å gjøre det enkelt å sende noe godt ut i verden."
+              data-en="A little light can be a warm thought, a few words of encouragement or simply a quiet reminder that someone cares."
+              data-no="Et lite lysglimt kan være en varm tanke, noen oppmuntrende ord eller bare en stille påminnelse om at noen bryr seg."
             >
-              SunzetReach was created with a simple idea:
-              make it easy to send something kind into the world.
-            </p>
-
-
-            <p
-              data-en="A little light can be a warm thought, a few encouraging words, a beautiful card or simply a reminder that someone cares."
-              data-no="Et lite lysglimt kan være en varm tanke, noen oppmuntrende ord, et vakkert kort eller bare en liten påminnelse om at noen bryr seg."
-            >
-              A little light can be a warm thought, a few encouraging
-              words, a beautiful card or simply a reminder that someone cares.
+              A little light can be a warm thought, a few words
+              of encouragement or simply a quiet reminder
+              that someone cares.
             </p>
 
           </div>
@@ -447,7 +456,6 @@
       </div>
 
     </section>
-
 
 
     <!-- =====================================
@@ -461,9 +469,7 @@
 
       <div class="page-shell">
 
-
         <div class="section-heading">
-
 
           <p
             class="eyebrow"
@@ -484,12 +490,9 @@
         </div>
 
 
-
         <div class="feature-grid">
 
-
           <article class="feature-card">
-
 
             <div
               class="feature-icon"
@@ -523,9 +526,7 @@
           </article>
 
 
-
           <article class="feature-card">
-
 
             <div
               class="feature-icon"
@@ -559,9 +560,7 @@
           </article>
 
 
-
           <article class="feature-card">
-
 
             <div
               class="feature-icon"
@@ -601,7 +600,6 @@
     </section>
 
 
-
     <!-- =====================================
          THREE STEPS
     ====================================== -->
@@ -610,9 +608,7 @@
 
       <div class="page-shell">
 
-
         <div class="section-heading centered">
-
 
           <p
             class="eyebrow"
@@ -633,12 +629,9 @@
         </div>
 
 
-
         <div class="steps-grid">
 
-
           <article class="step-card">
-
 
             <span class="step-number">
               01
@@ -664,9 +657,7 @@
           </article>
 
 
-
           <article class="step-card">
-
 
             <span class="step-number">
               02
@@ -692,9 +683,7 @@
           </article>
 
 
-
           <article class="step-card">
-
 
             <span class="step-number">
               03
@@ -726,6 +715,58 @@
     </section>
 
 
+    <!-- =====================================
+         WORLD LIGHTS
+    ====================================== -->
+
+    <section class="world-lights-story">
+
+      <div class="page-shell world-lights-story-grid">
+
+        <div class="world-lights-story-copy">
+
+          <p
+            class="eyebrow"
+            data-en="World Lights"
+            data-no="Lysglimt i verden"
+          >
+            World Lights
+          </p>
+
+
+          <h2
+            data-en="Let a little light travel further."
+            data-no="La et lite lysglimt reise videre."
+          >
+            Let a little light travel further.
+          </h2>
+
+
+          <p
+            data-en="Some little lights are sent without knowing who will receive them. They can travel from person to person, carrying a small moment of warmth along the way."
+            data-no="Noen lysglimt sendes uten at vi vet hvem som vil motta dem. De kan reise fra person til person og ta med seg et lite øyeblikk av varme på veien."
+          >
+            Some little lights are sent without knowing who will receive them.
+            They can travel from person to person, carrying a small moment
+            of warmth along the way.
+          </p>
+
+        </div>
+
+
+        <div class="world-lights-story-image">
+
+          <img
+            src="sunzetreach-world-lights.png"
+            alt="A little golden light travelling across a peaceful landscape"
+          />
+
+        </div>
+
+      </div>
+
+    </section>
+
 
     <!-- =====================================
          CARDS
@@ -738,9 +779,7 @@
 
       <div class="page-shell">
 
-
         <div class="section-heading centered">
-
 
           <p
             class="eyebrow"
@@ -772,9 +811,7 @@
         </div>
 
 
-
         <div class="card-message">
-
 
           <p
             data-en="More little lights are coming."
@@ -790,7 +827,6 @@
     </section>
 
 
-
     <!-- =====================================
          CONNECTIONS
     ====================================== -->
@@ -799,9 +835,7 @@
 
       <div class="page-shell connection-inner">
 
-
         <div class="connection-copy">
-
 
           <p
             class="eyebrow"
@@ -831,9 +865,7 @@
         </div>
 
 
-
         <div class="connection-card">
-
 
           <span
             data-en="YOUR CONNECTION"
@@ -862,7 +894,6 @@
     </section>
 
 
-
     <!-- =====================================
          PREMIUM
     ====================================== -->
@@ -874,9 +905,7 @@
 
       <div class="page-shell premium-inner">
 
-
         <div class="premium-copy">
-
 
           <p
             class="eyebrow"
@@ -910,7 +939,6 @@
     </section>
 
 
-
     <!-- =====================================
          DOWNLOAD
     ====================================== -->
@@ -922,9 +950,7 @@
 
       <div class="page-shell download-inner">
 
-
         <div class="download-copy">
-
 
           <p
             class="eyebrow"
@@ -954,9 +980,7 @@
         </div>
 
 
-
         <div class="download-buttons">
-
 
           <a
             href="#"
@@ -976,7 +1000,6 @@
             </strong>
 
           </a>
-
 
 
           <a
@@ -1007,7 +1030,6 @@
   </main>
 
 
-
   <!-- =====================================
        FOOTER
   ====================================== -->
@@ -1015,7 +1037,6 @@
   <footer class="site-footer">
 
     <div class="page-shell footer-inner">
-
 
       <a
         href="index.html"
@@ -1030,12 +1051,10 @@
       </a>
 
 
-
       <nav
         class="footer-links"
         aria-label="Footer navigation"
       >
-
 
         <a
           href="privacy.html"
@@ -1068,7 +1087,6 @@
       </nav>
 
 
-
       <p>
         © 2026 SunzetReach
       </p>
@@ -1078,13 +1096,11 @@
   </footer>
 
 
-
   <!-- =====================================
        LANGUAGE
   ====================================== -->
 
   <script>
-
 
     const languageButtons =
       document.querySelectorAll(
@@ -1099,7 +1115,6 @@
 
 
     const setLanguage = (language) => {
-
 
       document.documentElement.lang =
         language === "no"
@@ -1129,23 +1144,18 @@
       );
 
 
-      /*
-        Update Privacy and Terms
-        links according to language.
-      */
+      // Update Privacy and Terms links
+      // to match the selected language.
 
       document
         .querySelectorAll("[data-legal]")
         .forEach((link) => {
 
-
           const legalPage =
             link.dataset.legal;
 
 
-          if (
-            legalPage === "privacy"
-          ) {
+          if (legalPage === "privacy") {
 
             link.href =
               language === "no"
@@ -1155,9 +1165,7 @@
           }
 
 
-          if (
-            legalPage === "terms"
-          ) {
+          if (legalPage === "terms") {
 
             link.href =
               language === "no"
@@ -1177,10 +1185,8 @@
     };
 
 
-
     languageButtons.forEach(
       (button) => {
-
 
         button.addEventListener(
           "click",
@@ -1197,12 +1203,10 @@
     );
 
 
-
     const savedLanguage =
       localStorage.getItem(
         "sunzetreach-language"
       );
-
 
 
     const browserLanguage =
@@ -1213,7 +1217,6 @@
         : "en";
 
 
-
     setLanguage(
       savedLanguage ||
       browserLanguage
@@ -1221,7 +1224,5 @@
 
   </script>
 
-
 </body>
-
 </html>
