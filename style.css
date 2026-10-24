@@ -1426,3 +1426,141 @@ iframe {
 .postcard-collage {
   max-width: 100%;
 }
+
+
+/* MOBILE VIEWPORT LOCK — final override
+   Stops lateral page movement on touch devices while preserving vertical scrolling.
+   The versioned stylesheet URL in index.html also helps avoid stale mobile CSS cache. */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip !important;
+  overscroll-behavior-x: none !important;
+}
+
+body {
+  width: 100%;
+  min-width: 0 !important;
+  max-width: 100%;
+  overflow-x: clip !important;
+  overscroll-behavior-x: none !important;
+  position: relative;
+}
+
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+}
+
+@media (max-width: 800px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: clip !important;
+    overscroll-behavior-x: none !important;
+    touch-action: pan-y pinch-zoom;
+  }
+
+  body > header,
+  body > main,
+  body > footer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+  }
+
+  main,
+  main > section,
+  .page-shell,
+  .header-inner,
+  .footer-inner,
+  .hero-grid,
+  .intro-grid,
+  .little-light-story-grid,
+  .world-lights-story-grid,
+  .feature-grid,
+  .steps-grid,
+  .connection-inner,
+  .premium-inner,
+  .download-inner {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .site-header .main-nav {
+    display: none !important;
+  }
+
+  .hero-art,
+  .hero-logo-card,
+  .hero-image-frame,
+  .hero-image-frame img,
+  .hero-logo-card img.hero-logo {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .cards-section {
+    overflow-x: clip !important;
+  }
+
+  .postcard-collage {
+    width: min(100%, 420px) !important;
+    max-width: calc(100vw - 28px) !important;
+    overflow: clip !important;
+  }
+
+  .postcard {
+    max-width: 46%;
+  }
+
+  .postcard:hover {
+    transform: none;
+  }
+}
+
+
+/* FINAL MOBILE GESTURE LOCK
+   On small screens, permit vertical page scrolling and pinch zoom only.
+   This is intentionally a final override so it wins over earlier rules. */
+@media (max-width: 800px) {
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    overscroll-behavior-x: none !important;
+  }
+
+  html {
+    touch-action: pan-y pinch-zoom !important;
+  }
+
+  body,
+  body * ,
+  body *::before,
+  body *::after {
+    touch-action: pan-y pinch-zoom !important;
+  }
+
+  body > header,
+  body > main,
+  body > footer,
+  main > section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  img,
+  svg,
+  video,
+  iframe {
+    max-width: 100% !important;
+  }
+}
