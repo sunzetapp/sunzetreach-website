@@ -847,6 +847,184 @@
       }
     }
 
+
+
+    /* FINAL LAYOUT FIXES — these rules intentionally come last so they win
+       over earlier legacy overrides in this page. */
+    .hero-section .hero-grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+      align-items: center;
+      gap: clamp(28px, 4.5vw, 64px) !important;
+    }
+
+    .hero-section .hero-art,
+    .hero-section .hero-logo-card {
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0;
+    }
+
+    .hero-section .hero-logo-card {
+      overflow: hidden;
+      border-radius: 24px;
+    }
+
+    .hero-section .hero-logo-card img.hero-logo {
+      display: block;
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-section .hero-buttons {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      align-items: stretch;
+      gap: 12px !important;
+      width: 100%;
+      max-width: 520px;
+    }
+
+    .hero-section .hero-buttons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      min-height: 48px;
+      margin: 0 !important;
+      padding: 12px 14px;
+      text-align: center;
+      line-height: 1.35;
+      white-space: normal;
+    }
+
+    /* The two story images use the same 4:3 crop and the same grid fraction. */
+    .little-light-story-grid {
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr) !important;
+      align-items: center;
+      gap: clamp(30px, 5vw, 70px) !important;
+    }
+
+    .world-lights-story-grid {
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr) !important;
+      align-items: center;
+      gap: clamp(30px, 5vw, 70px) !important;
+    }
+
+    .little-light-story-image,
+    .world-lights-story-image {
+      width: 100%;
+      min-width: 0;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      border-radius: 24px;
+    }
+
+    .little-light-story-image img,
+    .world-lights-story-image img {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Small Gestures: each symbol is centered inside its own circle. */
+    .features-section .feature-card::before {
+      content: none !important;
+      display: none !important;
+    }
+
+    .features-section .feature-icon {
+      position: relative;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-sizing: border-box;
+      width: 58px !important;
+      height: 58px !important;
+      min-width: 58px;
+      margin: 0 0 18px !important;
+      padding: 0 !important;
+      border: 1px solid rgba(176, 143, 76, 0.30) !important;
+      border-radius: 50% !important;
+      background: rgba(255, 253, 247, 0.82) !important;
+      color: #636d59 !important;
+      font-size: 25px;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .premium-benefit-icon {
+      display: grid !important;
+      place-items: center !important;
+      flex: 0 0 38px;
+    }
+
+    .premium-share-icon svg {
+      display: block;
+      width: 19px;
+      height: 19px;
+      color: #636d59;
+    }
+
+    @media (max-width: 800px) {
+      .hero-section .hero-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 28px !important;
+      }
+
+      .hero-section .hero-buttons {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 9px !important;
+        max-width: none;
+      }
+
+      .hero-section .hero-buttons a {
+        min-height: 46px;
+        padding: 11px 9px;
+        font-size: 12px;
+      }
+
+      .little-light-story-grid,
+      .world-lights-story-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 28px !important;
+      }
+
+      .little-light-story-image,
+      .world-lights-story-image {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+      }
+
+      .little-light-story-image { order: 1; }
+      .little-light-story-grid .intro-heading { order: 2; }
+      .world-lights-story-grid .world-lights-story-copy { order: 1; }
+      .world-lights-story-grid .world-lights-story-image { order: 2; }
+
+      .features-section .feature-card,
+      .features-section .feature-card + .feature-card {
+        grid-template-columns: 58px minmax(0, 1fr) !important;
+        column-gap: 18px !important;
+      }
+
+      .features-section .feature-icon {
+        grid-column: 1 !important;
+        grid-row: 1 / span 3 !important;
+        margin: 4px 0 0 !important;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .hero-section .hero-buttons { gap: 7px !important; }
+      .hero-section .hero-buttons a { padding: 10px 6px; font-size: 11px; }
+    }
+
   </style>
 </head>
 
@@ -1057,7 +1235,11 @@
             </div>
           </div>
           <div class="premium-benefit">
-            <span class="premium-benefit-icon" aria-hidden="true">↗</span>
+            <span class="premium-benefit-icon premium-share-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                <path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
             <div>
               <h3 data-en="More ways to share" data-no="Flere måter å dele på">More ways to share</h3>
               <p data-en="Make it easier to send a little warmth along." data-no="Gjør det enklere å sende litt varme videre.">Make it easier to send a little warmth along.</p>
