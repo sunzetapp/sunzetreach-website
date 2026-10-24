@@ -12,25 +12,20 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* WORLD LIGHTS */
+    /* WORLD LIGHTS: subtle sage tint, not a dark banner */
     .world-lights-story {
       padding: 100px 0;
       background: rgba(244, 246, 238, 0.72);
       border-top: 1px solid rgba(62, 64, 56, 0.06);
       border-bottom: 1px solid rgba(62, 64, 56, 0.06);
     }
-
     .world-lights-story-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
       align-items: center;
       gap: 70px;
     }
-
-    .world-lights-story-copy {
-      max-width: 600px;
-    }
-
+    .world-lights-story-copy { max-width: 600px; }
     .world-lights-story-copy h2 {
       max-width: 520px;
       margin: 0;
@@ -41,7 +36,6 @@
       letter-spacing: -0.025em;
       color: var(--olive-dark);
     }
-
     .world-lights-story-copy p:last-child {
       max-width: 600px;
       margin: 28px 0 0;
@@ -49,14 +43,12 @@
       font-size: 13px;
       line-height: 1.85;
     }
-
     .world-lights-story-image {
       width: 100%;
       overflow: hidden;
       border-radius: 24px;
       box-shadow: 0 18px 45px rgba(50, 55, 45, 0.12);
     }
-
     .world-lights-story-image img {
       display: block;
       width: 100%;
@@ -65,16 +57,9 @@
       object-fit: cover;
     }
 
-    /* SMALL GESTURES */
-    .features-section {
-      padding-top: 95px;
-      padding-bottom: 95px;
-    }
-
-    .features-section .feature-grid {
-      gap: 18px;
-    }
-
+    /* SMALL GESTURES: soft cards with a little breathing room */
+    .features-section { padding-top: 95px; padding-bottom: 95px; }
+    .features-section .feature-grid { gap: 18px; }
     .features-section .feature-card {
       background: rgba(255, 255, 255, 0.52);
       border: 1px solid rgba(62, 64, 56, 0.09);
@@ -83,56 +68,25 @@
       padding: 28px 28px 30px;
       transition: transform 180ms ease, box-shadow 180ms ease;
     }
-
     .features-section .feature-card:hover {
       transform: translateY(-3px);
       box-shadow: 0 12px 30px rgba(50, 55, 45, 0.08);
     }
+    .features-section .feature-icon { width: 38px; height: 38px; margin-bottom: 22px; }
+    .features-section .feature-number { margin-bottom: 8px; }
+    .features-section .feature-card h3 { margin-bottom: 10px; }
+    .features-section .feature-card > p:last-child { max-width: 230px; margin-bottom: 0; line-height: 1.7; }
 
-    .features-section .feature-icon {
-      width: 38px;
-      height: 38px;
-      margin-bottom: 22px;
-    }
-
-    .features-section .feature-number {
-      margin-bottom: 8px;
-    }
-
-    .features-section .feature-card h3 {
-      margin-bottom: 10px;
-    }
-
-    .features-section .feature-card > p:last-child {
-      max-width: 230px;
-      margin-bottom: 0;
-      line-height: 1.7;
-    }
-
-    /* POSTCARD COLLAGE */
-    .cards-section {
-      overflow: hidden;
-    }
-
-    .cards-section .section-heading {
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cards-section .section-intro {
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
+    /* CARD GALLERY: the real SunzetReach postcard artwork */
+    .cards-section { overflow: hidden; }
+    .cards-section .section-heading { max-width: 760px; margin-left: auto; margin-right: auto; }
+    .cards-section .section-intro { max-width: 560px; margin-left: auto; margin-right: auto; }
     .postcard-collage {
       position: relative;
       width: min(100%, 760px);
       height: 395px;
       margin: 42px auto 0;
     }
-
     .postcard {
       position: absolute;
       top: 26px;
@@ -145,53 +99,24 @@
       transition: transform 220ms ease, box-shadow 220ms ease;
       transform-origin: 50% 85%;
     }
-
     .postcard img {
       display: block;
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
-    .postcard-wildflower {
-      left: 0;
-      top: 34px;
-      transform: rotate(-8deg);
-      z-index: 1;
-    }
-
-    .postcard-dreamscape {
-      left: 165px;
-      top: 2px;
-      transform: rotate(-2deg);
-      z-index: 2;
-    }
-
-    .postcard-picnic {
-      left: 330px;
-      top: 27px;
-      transform: rotate(5deg);
-      z-index: 3;
-    }
-
-    .postcard-puppy {
-      left: 495px;
-      top: 12px;
-      transform: rotate(9deg);
-      z-index: 4;
-    }
-
+    .postcard-wildflower { left: 0; top: 34px; transform: rotate(-8deg); z-index: 1; }
+    .postcard-dreamscape { left: 165px; top: 2px; transform: rotate(-2deg); z-index: 2; }
+    .postcard-picnic { left: 330px; top: 27px; transform: rotate(5deg); z-index: 3; }
+    .postcard-puppy { left: 495px; top: 12px; transform: rotate(9deg); z-index: 4; }
     .postcard:hover {
       transform: translateY(-12px) rotate(0deg) scale(1.035);
       box-shadow: 0 24px 45px rgba(45, 48, 39, 0.24);
       z-index: 8;
     }
+    .cards-section .section-heading .eyebrow { margin-bottom: 12px; }
 
-    .cards-section .section-heading .eyebrow {
-      margin-bottom: 12px;
-    }
-
-    /* CONNECTIONS */
+    /* CONNECTIONS: subtle gold detail to reinforce the private-ID idea */
     .connection-section {
       position: relative;
     }
@@ -205,17 +130,12 @@
       color: var(--olive-dark);
     }
 
-    /* PREMIUM: WARM CREAM, SAGE AND GOLD */
+    /* PREMIUM: warm cream, sage and understated gold */
     .premium-section {
       position: relative;
       overflow: hidden;
       padding: 100px 0;
-      background: linear-gradient(
-        135deg,
-        #f7f1e4 0%,
-        #f2eee2 58%,
-        #ecefdf 100%
-      );
+      background: linear-gradient(135deg, #f7f1e4 0%, #f2eee2 58%, #ecefdf 100%);
       border-top: 1px solid rgba(176, 143, 76, 0.18);
       border-bottom: 1px solid rgba(176, 143, 76, 0.18);
     }
@@ -302,14 +222,10 @@
       line-height: 1.75;
     }
 
-    /* DOWNLOAD: A CALM, CLEAR CLOSING SECTION */
+    /* DOWNLOAD: a calm but clear closing section */
     .download-section {
       padding: 94px 0;
-      background: linear-gradient(
-        135deg,
-        #e9eee4 0%,
-        #f1f1e7 100%
-      );
+      background: linear-gradient(135deg, #e9eee4 0%, #f1f1e7 100%);
       border-top: 1px solid rgba(62, 64, 56, 0.07);
     }
 
@@ -407,69 +323,415 @@
       box-shadow: 0 10px 24px rgba(48, 57, 43, 0.08);
     }
 
-    /* TABLET */
     @media (max-width: 900px) {
-      .postcard-collage {
-        width: min(100%, 620px);
-        height: 370px;
-      }
-
-      .postcard {
-        width: 185px;
-      }
-
-      .postcard-wildflower {
-        left: 0;
-        top: 40px;
-      }
-
-      .postcard-dreamscape {
-        left: 145px;
-        top: 6px;
-      }
-
-      .postcard-picnic {
-        left: 290px;
-        top: 28px;
-      }
-
-      .postcard-puppy {
-        left: 435px;
-        top: 12px;
-      }
+      .postcard-collage { width: min(100%, 620px); height: 370px; }
+      .postcard { width: 185px; }
+      .postcard-wildflower { left: 0; top: 40px; }
+      .postcard-dreamscape { left: 145px; top: 6px; }
+      .postcard-picnic { left: 290px; top: 28px; }
+      .postcard-puppy { left: 435px; top: 12px; }
     }
 
-    /* MOBILE */
     @media (max-width: 800px) {
-      .world-lights-story {
-        padding: 70px 0;
+      .world-lights-story { padding: 70px 0; }
+      .world-lights-story-grid { grid-template-columns: 1fr; gap: 45px; }
+      .world-lights-story-copy { order: 1; max-width: 720px; margin: 0 auto; text-align: center; }
+      .world-lights-story-image { order: 2; }
+      .world-lights-story-copy h2,
+      .world-lights-story-copy p:last-child { margin-left: auto; margin-right: auto; }
+      .features-section { padding-top: 70px; padding-bottom: 70px; }
+      .features-section .feature-grid { grid-template-columns: 1fr; gap: 15px; }
+      .features-section .feature-card { padding: 27px 25px 29px; text-align: center; }
+      .features-section .feature-card > p:last-child { margin-left: auto; margin-right: auto; }
+      .postcard-collage {
+        width: min(100%, 420px);
+        height: 570px;
+        margin-top: 34px;
+      }
+      .postcard { width: 49%; border-radius: 12px; }
+      .postcard-wildflower { left: 0; top: 4px; transform: rotate(-6deg); }
+      .postcard-dreamscape { left: 48%; top: 20px; transform: rotate(5deg); }
+      .postcard-picnic { left: 2%; top: 244px; transform: rotate(4deg); }
+      .postcard-puppy { left: 49%; top: 265px; transform: rotate(-5deg); }
+      .postcard:hover { transform: translateY(-5px) rotate(0deg) scale(1.015); }
+    }
+
+    @media (max-width: 800px) {
+      .premium-section { padding: 72px 0; }
+      .premium-inner,
+      .download-inner { grid-template-columns: 1fr; gap: 34px; }
+      .premium-benefits { padding: 8px 22px; }
+      .download-section { padding: 72px 0; }
+      .download-buttons { gap: 12px; }
+      .download-button { flex: 1 1 160px; }
+    }
+
+    @media (max-width: 420px) {
+      .postcard-collage { height: 500px; }
+      .postcard { width: 47%; }
+      .postcard-wildflower { left: 1%; top: 8px; }
+      .postcard-dreamscape { left: 49%; top: 18px; }
+      .postcard-picnic { left: 3%; top: 215px; }
+      .postcard-puppy { left: 50%; top: 232px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .postcard, .features-section .feature-card { transition: none; }
+    }
+
+
+    /* MOBILE HEADER AND DOWNLOAD BUTTONS */
+    @media (max-width: 800px) {
+      .site-header .header-inner {
+        min-height: 58px;
+        gap: 10px;
       }
 
-      .world-lights-story-grid {
-        grid-template-columns: 1fr;
-        gap: 45px;
+      .site-header .brand {
+        flex: 0 0 auto;
       }
 
-      .world-lights-story-copy {
-        order: 1;
-        max-width: 720px;
-        margin: 0 auto;
+      .site-header .brand-logo {
+        display: block;
+        width: 94px !important;
+        max-width: 94px !important;
+        height: auto;
+      }
+
+      .site-header .header-actions {
+        gap: 8px;
+        min-width: 0;
+      }
+
+      .site-header .main-nav {
+        gap: 9px;
+      }
+
+      .site-header .main-nav a {
+        white-space: nowrap;
+      }
+
+      .site-header .language-switch {
+        flex: 0 0 auto;
+        gap: 4px;
+      }
+
+      .download-buttons {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .download-button {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        padding: 12px 10px;
+        box-sizing: border-box;
         text-align: center;
       }
 
-      .world-lights-story-image {
-        order: 2;
+      .download-button span {
+        font-size: 9px;
+        margin-bottom: 3px;
       }
 
-      .world-lights-story-copy h2,
-      .world-lights-story-copy p:last-child {
-        margin-left: auto;
-        margin-right: auto;
+      .download-button strong {
+        font-size: 12px;
+        line-height: 1.25;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .site-header .brand-logo {
+        width: 82px !important;
+        max-width: 82px !important;
+      }
+
+      .site-header .header-actions {
+        gap: 6px;
+      }
+
+      .site-header .main-nav {
+        gap: 7px;
+      }
+
+      .site-header .main-nav a {
+        font-size: 9px;
+      }
+
+      .site-header .language-switch {
+        gap: 3px;
+      }
+
+      .download-buttons {
+        gap: 8px;
+      }
+
+      .download-button {
+        padding: 11px 7px;
+        border-radius: 11px;
+      }
+    }
+
+    /* =====================================
+       HERO IMAGE: GIVE IT THE SAME PRESENCE
+       AS THE OTHER FEATURE IMAGES
+    ====================================== */
+
+    .hero-section .hero-grid {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      align-items: center;
+      gap: clamp(36px, 6vw, 82px);
+    }
+
+    .hero-section .hero-art,
+    .hero-section .hero-logo-card {
+      width: 100%;
+      max-width: none !important;
+      min-width: 0;
+    }
+
+    .hero-section .hero-logo-card {
+      margin: 0;
+    }
+
+    .hero-section .hero-logo-card img.hero-logo {
+      display: block;
+      width: 100% !important;
+      max-width: none !important;
+      height: auto !important;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    /* =====================================
+       SMALL GESTURES: OPEN, EDITORIAL LAYOUT
+       INSTEAD OF THREE TABLE-LIKE BOXES
+    ====================================== */
+
+    .features-section {
+      position: relative;
+      padding: 100px 0 112px;
+      background: linear-gradient(135deg, #edf0e6 0%, #f5f2e8 100%);
+      border-top: 1px solid rgba(62, 64, 56, 0.06);
+      border-bottom: 1px solid rgba(62, 64, 56, 0.06);
+    }
+
+    .features-section .section-heading {
+      max-width: 760px;
+      margin-bottom: 38px;
+    }
+
+    .features-section .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      gap: clamp(18px, 3vw, 40px);
+      border: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    .features-section .feature-card,
+    .features-section .feature-card + .feature-card {
+      position: relative;
+      min-width: 0;
+      min-height: 220px;
+      padding: 24px 18px 22px;
+      text-align: left;
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      overflow: visible;
+      transition: transform 180ms ease;
+    }
+
+    .features-section .feature-card:nth-child(2) {
+      margin-top: 25px;
+    }
+
+    .features-section .feature-card:nth-child(3) {
+      margin-top: 8px;
+    }
+
+    .features-section .feature-card::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      background: rgba(255, 253, 247, 0.72);
+      border: 1px solid rgba(176, 143, 76, 0.20);
+      z-index: 0;
+    }
+
+    .features-section .feature-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .features-section .feature-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      margin: 0 0 22px 0;
+      background: transparent;
+      border: 0;
+      border-radius: 50%;
+      color: #636d59;
+      font-size: 25px;
+    }
+
+    .features-section .feature-number {
+      margin: 0 0 8px;
+      color: #a7823e;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+    }
+
+    .features-section .feature-card h3 {
+      margin: 0 0 10px;
+      color: var(--olive-dark);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(25px, 2.4vw, 31px);
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    .features-section .feature-card > p:last-child {
+      max-width: 245px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .features-section .feature-card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* =====================================
+       HOW IT WORKS: A CONNECTED JOURNEY,
+       NOT A GRID OF TABLE CELLS
+    ====================================== */
+
+    .steps-section {
+      padding: 100px 0 112px;
+      background: #fbf9f2;
+      border-top: 0;
+    }
+
+    .steps-section .section-heading {
+      max-width: 780px;
+      margin: 0 auto 48px;
+    }
+
+    .steps-section .steps-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: start;
+      gap: 28px;
+      border: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    .steps-section .steps-grid::before {
+      content: "";
+      position: absolute;
+      top: 27px;
+      left: 16.5%;
+      right: 16.5%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        rgba(176, 143, 76, 0.12),
+        rgba(176, 143, 76, 0.55),
+        rgba(176, 143, 76, 0.12)
+      );
+    }
+
+    .steps-section .step-card,
+    .steps-section .step-card + .step-card {
+      position: relative;
+      min-width: 0;
+      padding: 0 18px;
+      text-align: center;
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .steps-section .step-number {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 22px;
+      border: 1px solid rgba(176, 143, 76, 0.35);
+      border-radius: 50%;
+      background: #edf0e6;
+      color: #a7823e;
+      font-family: "Inter", sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    .steps-section .step-card h3 {
+      margin: 0 0 10px;
+      color: var(--olive-dark);
+      font-family: "Cormorant Garamond", serif;
+      font-size: 29px;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    .steps-section .step-card p {
+      max-width: 250px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    /* MOBILE: IMAGE FULL-WIDTH, FEATURES OPEN AND STEPS STACKED */
+    @media (max-width: 800px) {
+      .hero-section .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+      }
+
+      .hero-section .hero-art,
+      .hero-section .hero-logo-card {
+        width: 100%;
+        max-width: none !important;
+      }
+
+      .hero-section .hero-logo-card img.hero-logo {
+        width: 100% !important;
+        max-width: none !important;
+        aspect-ratio: 4 / 3;
       }
 
       .features-section {
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding: 72px 0 78px;
+      }
+
+      .features-section .section-heading {
+        margin-bottom: 24px;
       }
 
       .features-section .feature-grid {
@@ -477,131 +739,124 @@
         gap: 15px;
       }
 
-      .features-section .feature-card {
-        padding: 27px 25px 29px;
-        text-align: center;
+      .features-section .feature-card,
+      .features-section .feature-card + .feature-card {
+        display: grid;
+        grid-template-columns: 62px minmax(0, 1fr);
+        column-gap: 18px;
+        align-items: start;
+        min-height: 0;
+        margin: 0 !important;
+        padding: 22px 10px;
+        text-align: left;
+      }
+
+      .features-section .feature-card::before {
+        top: 12px;
+        left: 0;
+        width: 58px;
+        height: 58px;
+      }
+
+      .features-section .feature-icon {
+        grid-column: 1;
+        grid-row: 1 / span 3;
+        width: 52px;
+        height: 52px;
+        margin: 12px 0 0;
+      }
+
+      .features-section .feature-number {
+        grid-column: 2;
+        margin-bottom: 5px;
+      }
+
+      .features-section .feature-card h3 {
+        grid-column: 2;
+        margin-bottom: 7px;
+        font-size: 27px;
       }
 
       .features-section .feature-card > p:last-child {
-        margin-left: auto;
-        margin-right: auto;
+        grid-column: 2;
+        max-width: none;
+        margin: 0;
       }
 
-      .postcard-collage {
-        width: min(100%, 420px);
-        height: 570px;
-        margin-top: 34px;
+      .steps-section {
+        padding: 74px 0 82px;
       }
 
-      .postcard {
-        width: 49%;
-        border-radius: 12px;
+      .steps-section .section-heading {
+        margin-bottom: 34px;
       }
 
-      .postcard-wildflower {
-        left: 0;
-        top: 4px;
-        transform: rotate(-6deg);
-      }
-
-      .postcard-dreamscape {
-        left: 48%;
-        top: 20px;
-        transform: rotate(5deg);
-      }
-
-      .postcard-picnic {
-        left: 2%;
-        top: 244px;
-        transform: rotate(4deg);
-      }
-
-      .postcard-puppy {
-        left: 49%;
-        top: 265px;
-        transform: rotate(-5deg);
-      }
-
-      .postcard:hover {
-        transform: translateY(-5px) rotate(0deg) scale(1.015);
-      }
-
-      .premium-section {
-        padding: 72px 0;
-      }
-
-      .premium-inner,
-      .download-inner {
+      .steps-section .steps-grid {
         grid-template-columns: 1fr;
-        gap: 34px;
+        gap: 28px;
       }
 
-      .premium-benefits {
-        padding: 8px 22px;
+      .steps-section .steps-grid::before {
+        top: 26px;
+        bottom: 26px;
+        left: 26px;
+        right: auto;
+        width: 1px;
+        height: auto;
+        background: linear-gradient(
+          180deg,
+          rgba(176, 143, 76, 0.12),
+          rgba(176, 143, 76, 0.55),
+          rgba(176, 143, 76, 0.12)
+        );
       }
 
-      .download-section {
-        padding: 72px 0;
+      .steps-section .step-card,
+      .steps-section .step-card + .step-card {
+        display: grid;
+        grid-template-columns: 54px minmax(0, 1fr);
+        column-gap: 20px;
+        align-items: start;
+        padding: 0;
+        text-align: left;
       }
 
-      .download-buttons {
-        gap: 12px;
+      .steps-section .step-number {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        margin: 0;
       }
 
-      .download-button {
-        flex: 1 1 160px;
-      }
-    }
-
-    @media (max-width: 420px) {
-      .postcard-collage {
-        height: 500px;
+      .steps-section .step-card h3 {
+        grid-column: 2;
+        margin: 2px 0 7px;
+        font-size: 28px;
       }
 
-      .postcard {
-        width: 47%;
-      }
-
-      .postcard-wildflower {
-        left: 1%;
-        top: 8px;
-      }
-
-      .postcard-dreamscape {
-        left: 49%;
-        top: 18px;
-      }
-
-      .postcard-picnic {
-        left: 3%;
-        top: 215px;
-      }
-
-      .postcard-puppy {
-        left: 50%;
-        top: 232px;
+      .steps-section .step-card p {
+        grid-column: 2;
+        max-width: none;
+        margin: 0;
+        text-align: left;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .postcard,
       .features-section .feature-card {
         transition: none;
       }
     }
+
   </style>
 </head>
 
 <body>
-
   <!-- HEADER -->
   <header class="site-header">
     <div class="page-shell header-inner">
-
       <a href="index.html" class="brand" aria-label="SunzetReach home">
         <img src="sunzetreach-logo.png" alt="SunzetReach logo" class="brand-logo" />
       </a>
-
       <div class="header-actions">
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#about" data-en="About" data-no="Om SunzetReach">About</a>
@@ -609,220 +864,108 @@
           <a href="#cards" data-en="Cards" data-no="Kort">Cards</a>
           <a href="#premium" data-en="Premium" data-no="Premium">Premium</a>
         </nav>
-
         <div class="language-switch" aria-label="Choose language">
           <button type="button" class="language-button active" data-language="en">EN</button>
           <span aria-hidden="true">/</span>
           <button type="button" class="language-button" data-language="no">NO</button>
         </div>
       </div>
-
     </div>
   </header>
 
   <main>
-
     <!-- HERO -->
     <section class="hero-section">
       <div class="page-shell hero-grid">
-
         <div class="hero-copy">
           <p class="eyebrow" data-en="SunzetReach" data-no="SunzetReach">SunzetReach</p>
-
-          <h1
-            data-en="A kinder world, together."
-            data-no="En varmere verden, sammen."
-          >
-            A kinder world, together.
-          </h1>
-
-          <p
-            class="hero-text"
-            data-en="Send a little light to someone you know, or send one into the world. Small moments of warmth can travel further than we imagine."
-            data-no="Send et lite lysglimt til noen du kjenner, eller send et ut i verden. Små øyeblikk av varme kan nå lenger enn vi tror."
-          >
-            Send a little light to someone you know, or send one into the world.
-            Small moments of warmth can travel further than we imagine.
-          </p>
-
+          <h1 data-en="A kinder world, together." data-no="En varmere verden, sammen.">A kinder world, together.</h1>
+          <p class="hero-text" data-en="Send a little light to someone you know, or send one into the world. Small moments of warmth can travel further than we imagine." data-no="Send et lite lysglimt til noen du kjenner, eller send et ut i verden. Små øyeblikk av varme kan nå lenger enn vi tror.">Send a little light to someone you know, or send one into the world. Small moments of warmth can travel further than we imagine.</p>
           <div class="hero-buttons">
-            <a
-              href="#download"
-              class="primary-button"
-              data-en="Discover SunzetReach"
-              data-no="Oppdag SunzetReach"
-            >
-              Discover SunzetReach
-            </a>
-
-            <a
-              href="#how-it-works"
-              class="secondary-button"
-              data-en="How it works"
-              data-no="Slik fungerer det"
-            >
-              How it works
-            </a>
+            <a href="#download" class="primary-button" data-en="Discover SunzetReach" data-no="Oppdag SunzetReach">Discover SunzetReach</a>
+            <a href="#how-it-works" class="secondary-button" data-en="How it works" data-no="Slik fungerer det">How it works</a>
           </div>
         </div>
-
         <div class="hero-art">
           <div class="hero-logo-card">
             <img src="sunzetreach-hero.png.png" alt="SunzetReach" class="hero-logo" />
             <div class="hero-logo-line"></div>
-            <p
-              data-en="Send a little light into the world."
-              data-no="Send et lite lysglimt ut i verden."
-            >
-              Send a little light into the world.
-            </p>
+            <p data-en="Send a little light into the world." data-no="Send et lite lysglimt ut i verden.">Send a little light into the world.</p>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- ABOUT -->
     <section class="intro-section" id="about">
       <div class="page-shell intro-grid">
-
         <div class="intro-heading">
           <p class="eyebrow" data-en="A simple thought" data-no="En enkel tanke">A simple thought</p>
-          <h2
-            data-en="Little lights can make a difference."
-            data-no="Små lysglimt kan gjøre en forskjell."
-          >
-            Little lights can make a difference.
-          </h2>
+          <h2 data-en="Little lights can make a difference." data-no="Små lysglimt kan gjøre en forskjell.">Little lights can make a difference.</h2>
         </div>
-
         <div class="intro-copy">
-          <p
-            data-en="SunzetReach was created with a simple idea: make it easy to send something kind into the world."
-            data-no="SunzetReach er skapt med en enkel tanke: å gjøre det enkelt å sende noe godt ut i verden."
-          >
-            SunzetReach was created with a simple idea: make it easy to send something kind into the world.
-          </p>
-
-          <p
-            data-en="A little light can be a warm thought, a few encouraging words, a beautiful card or simply a reminder that someone cares."
-            data-no="Et lite lysglimt kan være en varm tanke, noen oppmuntrende ord, et vakkert kort eller bare en liten påminnelse om at noen bryr seg."
-          >
-            A little light can be a warm thought, a few encouraging words,
-            a beautiful card or simply a reminder that someone cares.
-          </p>
+          <p data-en="SunzetReach was created with a simple idea: make it easy to send something kind into the world." data-no="SunzetReach er skapt med en enkel tanke: å gjøre det enkelt å sende noe godt ut i verden.">SunzetReach was created with a simple idea: make it easy to send something kind into the world.</p>
+          <p data-en="A little light can be a warm thought, a few encouraging words, a beautiful card or simply a reminder that someone cares." data-no="Et lite lysglimt kan være en varm tanke, noen oppmuntrende ord, et vakkert kort eller bare en liten påminnelse om at noen bryr seg.">A little light can be a warm thought, a few encouraging words, a beautiful card or simply a reminder that someone cares.</p>
         </div>
-
       </div>
     </section>
 
     <!-- A LITTLE LIGHT -->
     <section class="little-light-story">
       <div class="page-shell little-light-story-grid">
-
         <div class="little-light-story-image">
-          <img
-            src="sunzetreach-little-light.png"
-            alt="A glowing little light beside a peaceful lake at sunset"
-          />
+          <img src="sunzetreach-little-light.png" alt="A glowing little light beside a peaceful lake at sunset" />
         </div>
-
         <div class="intro-heading">
           <p class="eyebrow" data-en="A little light" data-no="Et lite lysglimt">A little light</p>
-
-          <h2
-            data-en="Sometimes, a small gesture is enough."
-            data-no="Noen ganger er en liten handling nok."
-          >
-            Sometimes, a small gesture is enough.
-          </h2>
-
+          <h2 data-en="Sometimes, a small gesture is enough." data-no="Noen ganger er en liten handling nok.">Sometimes, a small gesture is enough.</h2>
           <div class="intro-copy">
-            <p
-              data-en="A little light can be a warm thought, a few words of encouragement or simply a quiet reminder that someone cares."
-              data-no="Et lite lysglimt kan være en varm tanke, noen oppmuntrende ord eller bare en stille påminnelse om at noen bryr seg."
-            >
-              A little light can be a warm thought, a few words of encouragement
-              or simply a quiet reminder that someone cares.
-            </p>
+            <p data-en="A little light can be a warm thought, a few words of encouragement or simply a quiet reminder that someone cares." data-no="Et lite lysglimt kan være en varm tanke, noen oppmuntrende ord eller bare en stille påminnelse om at noen bryr seg.">A little light can be a warm thought, a few words of encouragement or simply a quiet reminder that someone cares.</p>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- WORLD LIGHTS -->
     <section class="world-lights-story" id="world-lights">
       <div class="page-shell world-lights-story-grid">
-
         <div class="world-lights-story-copy">
           <p class="eyebrow" data-en="World Lights" data-no="Lysglimt i verden">World Lights</p>
-
-          <h2
-            data-en="Let a little light travel further."
-            data-no="La et lite lysglimt reise videre."
-          >
-            Let a little light travel further.
-          </h2>
-
-          <p
-            data-en="Some little lights are sent without knowing who will receive them. They can travel from person to person, carrying a small moment of warmth along the way."
-            data-no="Noen lysglimt sendes uten at vi vet hvem som vil motta dem. De kan reise fra person til person og ta med seg et lite øyeblikk av varme på veien."
-          >
-            Some little lights are sent without knowing who will receive them.
-            They can travel from person to person, carrying a small moment
-            of warmth along the way.
-          </p>
+          <h2 data-en="Let a little light travel further." data-no="La et lite lysglimt reise videre.">Let a little light travel further.</h2>
+          <p data-en="Some little lights are sent without knowing who will receive them. They can travel from person to person, carrying a small moment of warmth along the way." data-no="Noen lysglimt sendes uten at vi vet hvem som vil motta dem. De kan reise fra person til person og ta med seg et lite øyeblikk av varme på veien.">Some little lights are sent without knowing who will receive them. They can travel from person to person, carrying a small moment of warmth along the way.</p>
         </div>
-
         <div class="world-lights-story-image">
-          <img
-            src="sunzetreach-world-lights.png"
-            alt="A little golden light travelling across a peaceful landscape"
-          />
+          <img src="sunzetreach-world-lights.png" alt="A little golden light travelling across a peaceful landscape" />
         </div>
-
       </div>
     </section>
 
     <!-- SMALL GESTURES -->
     <section class="features-section" id="lights">
       <div class="page-shell">
-
         <div class="section-heading">
           <p class="eyebrow" data-en="Little lights" data-no="Lysglimt">Little lights</p>
-
-          <h2
-            data-en="Small gestures. Real connections."
-            data-no="Små handlinger. Ekte forbindelser."
-          >
-            Small gestures. Real connections.
-          </h2>
+          <h2 data-en="Small gestures. Real connections." data-no="Små handlinger. Ekte forbindelser.">Small gestures. Real connections.</h2>
         </div>
-
         <div class="feature-grid">
-
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">✦</div>
             <p class="feature-number">01</p>
             <h3 data-en="Send to someone" data-no="Send til noen">Send to someone</h3>
             <p data-en="For someone you know." data-no="For noen du kjenner.">For someone you know.</p>
           </article>
-
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">✧</div>
             <p class="feature-number">02</p>
             <h3 data-en="Send to the world" data-no="Send til verden">Send to the world</h3>
             <p data-en="Let a little light travel." data-no="La et lite lysglimt reise videre.">Let a little light travel.</p>
           </article>
-
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">◇</div>
             <p class="feature-number">03</p>
             <h3 data-en="Pass it on" data-no="Send det videre">Pass it on</h3>
             <p data-en="Keep the light moving." data-no="La lysglimtet bevege seg videre.">Keep the light moving.</p>
           </article>
-
         </div>
       </div>
     </section>
@@ -830,120 +973,52 @@
     <!-- HOW IT WORKS -->
     <section class="steps-section" id="how-it-works">
       <div class="page-shell">
-
         <div class="section-heading centered">
           <p class="eyebrow" data-en="How it works" data-no="Slik fungerer det">How it works</p>
-
-          <h2
-            data-en="One little light can start something beautiful."
-            data-no="Ett lite lysglimt kan starte noe vakkert."
-          >
-            One little light can start something beautiful.
-          </h2>
+          <h2 data-en="One little light can start something beautiful." data-no="Ett lite lysglimt kan starte noe vakkert.">One little light can start something beautiful.</h2>
         </div>
-
         <div class="steps-grid">
-
           <article class="step-card">
             <span class="step-number">01</span>
             <h3 data-en="Choose" data-no="Velg">Choose</h3>
-            <p
-              data-en="Choose someone you know, or choose to send a little light into the world."
-              data-no="Velg noen du kjenner, eller velg å sende et lite lysglimt ut i verden."
-            >
-              Choose someone you know, or choose to send a little light into the world.
-            </p>
+            <p data-en="Choose someone you know, or choose to send a little light into the world." data-no="Velg noen du kjenner, eller velg å sende et lite lysglimt ut i verden.">Choose someone you know, or choose to send a little light into the world.</p>
           </article>
-
           <article class="step-card">
             <span class="step-number">02</span>
             <h3 data-en="Send" data-no="Send">Send</h3>
-            <p
-              data-en="Choose a card, add a message and send your little light on its way."
-              data-no="Velg et kort, legg til en melding og send lysglimtet videre."
-            >
-              Choose a card, add a message and send your little light on its way.
-            </p>
+            <p data-en="Choose a card, add a message and send your little light on its way." data-no="Velg et kort, legg til en melding og send lysglimtet videre.">Choose a card, add a message and send your little light on its way.</p>
           </article>
-
           <article class="step-card">
             <span class="step-number">03</span>
             <h3 data-en="Spread" data-no="Spre">Spread</h3>
-            <p
-              data-en="Let kindness travel from person to person and become part of a larger ripple."
-              data-no="La omtanke bevege seg fra person til person og bli en del av en større ringvirkning."
-            >
-              Let kindness travel from person to person and become part of a larger ripple.
-            </p>
+            <p data-en="Let kindness travel from person to person and become part of a larger ripple." data-no="La omtanke bevege seg fra person til person og bli en del av en større ringvirkning.">Let kindness travel from person to person and become part of a larger ripple.</p>
           </article>
-
         </div>
       </div>
     </section>
 
-    <!-- CARDS -->
+    <!-- CARDS: COLLAGE OF THE FOUR ORIGINAL CARD FILES -->
     <section class="cards-section" id="cards">
       <div class="page-shell">
-
         <div class="section-heading centered">
-          <p
-            class="eyebrow"
-            data-en="Little lights, beautifully sent"
-            data-no="Lysglimt, vakkert sendt"
-          >
-            Little lights, beautifully sent
-          </p>
-
-          <h2
-            data-en="A card for every little moment."
-            data-no="Et kort for hvert lille øyeblikk."
-          >
-            A card for every little moment.
-          </h2>
-
-          <p
-            class="section-intro"
-            data-en="A little warmth, a touch of magic, or a reason to celebrate."
-            data-no="Litt varme, et snev av magi eller en anledning til å feire."
-          >
-            A little warmth, a touch of magic, or a reason to celebrate.
-          </p>
+          <p class="eyebrow" data-en="Little lights, beautifully sent" data-no="Lysglimt, vakkert sendt">Little lights, beautifully sent</p>
+          <h2 data-en="A card for every little moment." data-no="Et kort for hvert lille øyeblikk.">A card for every little moment.</h2>
+          <p class="section-intro" data-en="A little warmth, a touch of magic, or a reason to celebrate." data-no="Litt varme, et snev av magi eller en anledning til å feire.">A little warmth, a touch of magic, or a reason to celebrate.</p>
         </div>
 
         <div class="postcard-collage" aria-label="A selection of SunzetReach cards">
-
           <div class="postcard postcard-wildflower">
-            <img
-              src="wildflower.png"
-              alt="Wildflower — a fox in a sunset meadow"
-              loading="lazy"
-            />
+            <img src="wildflower.png" alt="Wildflower — a fox in a sunset meadow" loading="lazy" />
           </div>
-
           <div class="postcard postcard-dreamscape">
-            <img
-              src="dreamscape.png"
-              alt="Dreamscape — a magical moonlit lake and doorway"
-              loading="lazy"
-            />
+            <img src="dreamscape.png" alt="Dreamscape — a magical moonlit lake and doorway" loading="lazy" />
           </div>
-
           <div class="postcard postcard-picnic">
-            <img
-              src="sunset-picnic.png"
-              alt="Sunset picnic with hearts, flowers and candlelight"
-              loading="lazy"
-            />
+            <img src="sunset-picnic.png" alt="Sunset picnic with hearts, flowers and candlelight" loading="lazy" />
           </div>
-
           <div class="postcard postcard-puppy">
-            <img
-              src="puppy-valentine.png"
-              alt="Puppy Valentine with a golden puppy and a rose"
-              loading="lazy"
-            />
+            <img src="puppy-valentine.png" alt="Puppy Valentine with a golden puppy and a rose" loading="lazy" />
           </div>
-
         </div>
       </div>
     </section>
@@ -951,171 +1026,89 @@
     <!-- CONNECTIONS -->
     <section class="connection-section">
       <div class="page-shell connection-inner">
-
         <div class="connection-copy">
           <p class="eyebrow" data-en="Real connections" data-no="Ekte forbindelser">Real connections</p>
-
-          <h2
-            data-en="Connect without needing to share your phone number."
-            data-no="Koble deg sammen uten å måtte dele telefonnummeret ditt."
-          >
-            Connect without needing to share your phone number.
-          </h2>
-
-          <p
-            data-en="SunzetReach uses SunzetReach-ID to help people connect in a simple and more private way."
-            data-no="SunzetReach bruker SunzetReach-ID for å gjøre det enkelt å knytte forbindelser på en mer privat måte."
-          >
-            SunzetReach uses SunzetReach-ID to help people connect
-            in a simple and more private way.
-          </p>
+          <h2 data-en="Connect without needing to share your phone number." data-no="Koble deg sammen uten å måtte dele telefonnummeret ditt.">Connect without needing to share your phone number.</h2>
+          <p data-en="SunzetReach uses SunzetReach-ID to help people connect in a simple and more private way." data-no="SunzetReach bruker SunzetReach-ID for å gjøre det enkelt å knytte forbindelser på en mer privat måte.">SunzetReach uses SunzetReach-ID to help people connect in a simple and more private way.</p>
         </div>
-
         <div class="connection-card">
           <span data-en="YOUR CONNECTION" data-no="DIN FORBINDELSE">YOUR CONNECTION</span>
           <strong>SunzetReach-ID</strong>
-          <p
-            data-en="A simple way to find and connect with someone."
-            data-no="En enkel måte å finne og koble deg sammen med noen."
-          >
-            A simple way to find and connect with someone.
-          </p>
+          <p data-en="A simple way to find and connect with someone." data-no="En enkel måte å finne og koble deg sammen med noen.">A simple way to find and connect with someone.</p>
         </div>
-
       </div>
     </section>
 
     <!-- PREMIUM -->
     <section class="premium-section" id="premium">
       <div class="page-shell premium-inner">
-
         <div class="premium-copy">
           <p class="eyebrow" data-en="SunzetReach Premium" data-no="SunzetReach Premium">SunzetReach Premium</p>
-
-          <h2
-            data-en="A little extra for those who love to share."
-            data-no="Litt ekstra for deg som liker å dele."
-          >
-            A little extra for those who love to share.
-          </h2>
-
-          <p
-            data-en="Make room for more connections, more ways to share little lights and special cards for meaningful moments."
-            data-no="Få plass til flere forbindelser, flere måter å dele lysglimt på og egne kort til små og store øyeblikk."
-          >
-            Make room for more connections, more ways to share little lights
-            and special cards for meaningful moments.
-          </p>
+          <h2 data-en="A little extra for those who love to share." data-no="Litt ekstra for deg som liker å dele.">A little extra for those who love to share.</h2>
+          <p data-en="Make room for more connections, more ways to share little lights and special cards for meaningful moments." data-no="Få plass til flere forbindelser, flere måter å dele lysglimt på og egne kort til små og store øyeblikk.">Make room for more connections, more ways to share little lights and special cards for meaningful moments.</p>
         </div>
 
         <div class="premium-benefits" aria-label="Premium benefits">
-
           <div class="premium-benefit">
             <span class="premium-benefit-icon" aria-hidden="true">✧</span>
             <div>
               <h3 data-en="More connections" data-no="Flere forbindelser">More connections</h3>
-              <p
-                data-en="Share little lights with more people."
-                data-no="Del lysglimt med flere mennesker."
-              >
-                Share little lights with more people.
-              </p>
+              <p data-en="Share little lights with more people." data-no="Del lysglimt med flere mennesker.">Share little lights with more people.</p>
             </div>
           </div>
-
           <div class="premium-benefit">
             <span class="premium-benefit-icon" aria-hidden="true">↗</span>
             <div>
               <h3 data-en="More ways to share" data-no="Flere måter å dele på">More ways to share</h3>
-              <p
-                data-en="Make it easier to send a little warmth along."
-                data-no="Gjør det enklere å sende litt varme videre."
-              >
-                Make it easier to send a little warmth along.
-              </p>
+              <p data-en="Make it easier to send a little warmth along." data-no="Gjør det enklere å sende litt varme videre.">Make it easier to send a little warmth along.</p>
             </div>
           </div>
-
           <div class="premium-benefit">
             <span class="premium-benefit-icon" aria-hidden="true">✦</span>
             <div>
               <h3 data-en="Exclusive cards" data-no="Eksklusive kort">Exclusive cards</h3>
-              <p
-                data-en="Find a special design for meaningful moments."
-                data-no="Finn et spesielt design til betydningsfulle øyeblikk."
-              >
-                Find a special design for meaningful moments.
-              </p>
+              <p data-en="Find a special design for meaningful moments." data-no="Finn et spesielt design til betydningsfulle øyeblikk.">Find a special design for meaningful moments.</p>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
 
     <!-- DOWNLOAD -->
     <section class="download-section" id="download">
       <div class="page-shell download-inner">
-
         <div class="download-copy">
           <p class="eyebrow" data-en="Your next little light" data-no="Ditt neste lysglimt">Your next little light</p>
-
-          <h2
-            data-en="Ready to pass a little kindness on?"
-            data-no="Klar for å sende litt omtanke videre?"
-          >
-            Ready to pass a little kindness on?
-          </h2>
-
-          <p
-            data-en="Discover SunzetReach and become part of a kinder world, one little light at a time."
-            data-no="Oppdag SunzetReach og bli en del av en varmere verden – ett lite lysglimt om gangen."
-          >
-            Discover SunzetReach and become part of a kinder world,
-            one little light at a time.
-          </p>
+          <h2 data-en="Ready to pass a little kindness on?" data-no="Klar for å sende litt omtanke videre?">Ready to pass a little kindness on?</h2>
+          <p data-en="Discover SunzetReach and become part of a kinder world, one little light at a time." data-no="Oppdag SunzetReach og bli en del av en varmere verden – ett lite lysglimt om gangen.">Discover SunzetReach and become part of a kinder world, one little light at a time.</p>
         </div>
-
         <div class="download-buttons">
-
           <a href="#" class="download-button" aria-label="App Store link coming soon">
             <span data-en="Coming soon to" data-no="Kommer snart til">Coming soon to</span>
             <strong>App Store</strong>
           </a>
-
           <a href="#" class="download-button download-button-outline" aria-label="Google Play link coming soon">
             <span data-en="Coming soon to" data-no="Kommer snart til">Coming soon to</span>
             <strong>Google Play</strong>
           </a>
-
         </div>
-
       </div>
     </section>
-
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="page-shell footer-inner">
-
-      <a href="index.html" class="footer-brand">
-        <img src="sunzetreach-logo.png" alt="" />
-      </a>
-
+      <a href="index.html" class="footer-brand"><img src="sunzetreach-logo.png" alt="" /></a>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="privacy.html" data-en="Privacy" data-no="Personvern" data-legal="privacy">Privacy</a>
         <a href="terms.html" data-en="Terms" data-no="Vilkår" data-legal="terms">Terms</a>
         <a href="mailto:sunzet.app@gmail.com" data-en="Contact" data-no="Kontakt">Contact</a>
       </nav>
-
       <p>© 2026 SunzetReach</p>
-
     </div>
   </footer>
 
-  <!-- LANGUAGE SWITCH -->
   <script>
     const languageButtons = document.querySelectorAll(".language-button");
     const translatedElements = document.querySelectorAll("[data-en][data-no]");
@@ -1128,19 +1121,14 @@
       });
 
       languageButtons.forEach((button) => {
-        button.classList.toggle(
-          "active",
-          button.dataset.language === language
-        );
+        button.classList.toggle("active", button.dataset.language === language);
       });
 
       document.querySelectorAll("[data-legal]").forEach((link) => {
         const legalPage = link.dataset.legal;
-
         if (legalPage === "privacy") {
           link.href = language === "no" ? "privacy-no.html" : "privacy.html";
         }
-
         if (legalPage === "terms") {
           link.href = language === "no" ? "terms-no.html" : "terms.html";
         }
@@ -1150,19 +1138,12 @@
     };
 
     languageButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        setLanguage(button.dataset.language);
-      });
+      button.addEventListener("click", () => setLanguage(button.dataset.language));
     });
 
     const savedLanguage = localStorage.getItem("sunzetreach-language");
-
-    const browserLanguage = navigator.language.toLowerCase().startsWith("no")
-      ? "no"
-      : "en";
-
+    const browserLanguage = navigator.language.toLowerCase().startsWith("no") ? "no" : "en";
     setLanguage(savedLanguage || browserLanguage);
   </script>
-
 </body>
 </html>
