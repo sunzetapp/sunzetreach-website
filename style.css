@@ -23,15 +23,20 @@
 }
 
 html {
+  width: 100%;
+  max-width: 100%;
   scroll-behavior: smooth;
-  overflow-x: clip;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 body {
   width: 100%;
+  max-width: 100%;
   min-width: 0;
   margin: 0;
-  overflow-x: clip;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
   color: var(--text);
   background: linear-gradient(145deg, #f3f5ed 0%, var(--cream) 46%, #faf7ef 100%);
   font-family: "Inter", sans-serif;
@@ -1355,4 +1360,54 @@ button {
     scroll-behavior: auto !important;
     transition: none !important;
   }
+}
+
+
+/* FINAL SAFEGUARD: keep every page locked to the viewport width.
+   The page scrolls vertically only; horizontal scrolling is disabled. */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+  overscroll-behavior-x: none;
+}
+
+body {
+  position: relative;
+}
+
+main,
+header,
+footer,
+section,
+.page-shell,
+.hero-grid,
+.intro-grid,
+.little-light-story-grid,
+.world-lights-story-grid,
+.feature-grid,
+.steps-grid,
+.connection-inner,
+.premium-inner,
+.download-inner,
+.footer-inner {
+  min-width: 0;
+  max-width: 100%;
+}
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* Keep the rotated card artwork inside its own section. */
+.cards-section {
+  overflow-x: hidden;
+}
+
+.postcard-collage {
+  max-width: 100%;
 }
