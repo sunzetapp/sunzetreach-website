@@ -965,11 +965,16 @@
       flex: 0 0 38px;
     }
 
+    .premium-share-icon {
+      color: var(--gold) !important;
+    }
+
     .premium-share-icon svg {
       display: block;
       width: 19px;
       height: 19px;
-      color: #636d59;
+      color: var(--gold) !important;
+      stroke: var(--gold) !important;
     }
 
     @media (max-width: 800px) {
@@ -1066,7 +1071,9 @@
         </div>
         <div class="hero-art">
           <div class="hero-logo-card">
-            <img src="sunzetreach-hero.png.png" alt="SunzetReach" class="hero-logo" />
+            <div class="hero-image-frame">
+              <img src="sunzetreach-hero.png.png" alt="SunzetReach" class="hero-logo" />
+            </div>
             <div class="hero-logo-line"></div>
             <p data-en="Send a little light into the world." data-no="Send et lite lysglimt ut i verden.">Send a little light into the world.</p>
           </div>
